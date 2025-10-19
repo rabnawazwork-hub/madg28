@@ -10,6 +10,7 @@ class MockApiService {
         "id": "1",
         "name": "Flutter for Beginners",
         "description": "A comprehensive course for beginners to learn Flutter.",
+         "imageUrl": "assets/images/flutter.png",
         "lessons": [
           {
             "id": "101",
@@ -27,6 +28,7 @@ class MockApiService {
         "id": "2",
         "name": "Advanced Flutter",
         "description": "Take your Flutter skills to the next level.",
+        "imageUrl": "assets/images/advance_flutter.png",
         "lessons": [
           {
             "id": "201",

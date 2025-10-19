@@ -3,12 +3,14 @@ class Program {
   final String id;
   final String name;
   final String description;
+  final String imageUrl; 
   final List<Lesson> lessons;
 
   Program({
     required this.id,
     required this.name,
     required this.description,
+    required this.imageUrl,
     required this.lessons,
   });
 
@@ -17,6 +19,7 @@ class Program {
       id: json['id'],
       name: json['name'],
       description: json['description'],
+      imageUrl: json['imageUrl'],
       lessons: (json['lessons'] as List)
           .map((lesson) => Lesson.fromJson(lesson))
           .toList(),
