@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:madg28/screens/home/program_listing.dart';
 import 'package:madg28/screens/profile/profile_screen.dart';
-
+import 'screens/login/login_screen.dart';
+import 'screens/signup/signup_screen.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -20,7 +21,11 @@ class MyApp extends StatelessWidget {
           tertiary: const Color(0xFFF99D79),
         ),
       ),
-      home: const MainScreen(),
+      home: const LoginScreen(),
+      routes: {
+        LoginScreen.routeName: (context) => const LoginScreen(),
+        SignUpScreen.routeName: (context) => const SignUpScreen(),
+},
     );
   }
 }
