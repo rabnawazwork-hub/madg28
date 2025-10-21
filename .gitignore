@@ -1,0 +1,52 @@
+# Build & tool folders
+build/
+.dart_tool/
+.pub/
+*.apk
+*.so
+*.zip
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.idea/
+.vscode/
+
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+
+# Android
+local.properties
+.gradle/
+captures/
+*.iml
+
+# iOS
+Pods/
+Podfile.lock
+*.xcworkspace
+DerivedData/
+
+# Web
+node_modules/
+*.lock
+*.metadata
+
+# Firebase
+.firebase/
+firebase.json
+.firebaserc
+firebase.debug.log
+firebase.crashlytics.unity.crashes.binary
+
+# Environment & Others
+.env
