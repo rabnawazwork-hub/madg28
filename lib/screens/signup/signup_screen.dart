@@ -75,8 +75,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           controller: _passwordController,
                           label: 'Password',
                           validator: (value) {
-                            if (value == null || value.length < 6) {
-                              return 'Password must be at least 6 characters';
+                            if (value == null || value.isEmpty) {
+                              return 'Enter your password';
+                            } else if (value.length < 8) {
+                              return 'Password must be at least 8 characters long';
+                            } else if (!RegExp(r'(?=.*[A-Z])').hasMatch(value)) {
+                              return 'Password must contain at least one uppercase letter';
+                            } else if (!RegExp(r'(?=.*[a-z])').hasMatch(value)) {
+                              return 'Password must contain at least one lowercase letter';
+                            } else if (!RegExp(r'(?=.*\d)').hasMatch(value)) {
+                              return 'Password must contain at least one number';
+                            } else if (!RegExp(r'(?=.*[@$!%*?&])').hasMatch(value)) {
+                              return 'Password must contain at least one special character (@, \$, !, %, *, ?, &)';
                             }
                             return null;
                           },
