@@ -64,6 +64,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       Provider.of<UserProvider>(context, listen: false).setUser(
         name: _nameController.text.trim(),
         email: _emailController.text.trim(),
+        imagePath: _profileImage?.path,
       );
       Navigator.pop(context);
     }
@@ -101,7 +102,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 controller: _nameController,
                 decoration: const InputDecoration(labelText: 'Full Name'),
                 validator: (value) =>
-                    value == null || value.trim().isEmpty ? 'Please enter your name' : null,
+                    value == null || value.trim().isEmpty
+                        ? 'Please enter your name'
+                        : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
@@ -115,7 +118,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               const SizedBox(height: 12),
               TextFormField(
                 controller: _passwordController,
-                decoration: const InputDecoration(labelText: 'Password (leave blank to keep)'),
+                decoration:
+                    const InputDecoration(labelText: 'Password (leave blank to keep)'),
                 obscureText: true,
               ),
               const SizedBox(height: 12),

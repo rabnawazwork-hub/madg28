@@ -76,6 +76,7 @@ flutter:
     - assets/images/logo.png
     - assets/images/google.png
     - assets/images/facebook.png
+    - assets/images/default_avatar.png
     - assets/data/
 
 

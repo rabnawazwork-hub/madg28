@@ -1,3 +1,5 @@
+import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/user_provider.dart';
@@ -10,6 +12,15 @@ import '../search/search_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
+
+  ImageProvider? _getImageProvider(UserProvider user) {
+    if (user.imagePath == null || user.imagePath!.trim().isEmpty) return null;
+    if (kIsWeb) {
+      return NetworkImage(user.imagePath!);
+    } else {
+      return FileImage(File(user.imagePath!));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +49,10 @@ class ProfileScreen extends StatelessWidget {
             CircleAvatar(
               radius: 50,
               backgroundColor: theme.tertiary,
-              child: Icon(Icons.person, size: 50, color: theme.onPrimary),
+              backgroundImage: _getImageProvider(user),
+              child: user.imagePath == null
+                  ? Icon(Icons.person, size: 50, color: theme.onPrimary)
+                  : null,
             ),
             const SizedBox(height: 12),
             Text(user.name,
