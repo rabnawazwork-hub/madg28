@@ -10,4 +10,12 @@ class MockApiService {
     final List<dynamic> programList = data['programs'];
     return programList.map((json) => Program.fromJson(json)).toList();
   }
+
+  Future<Program> getProgramById(String id) async {
+    final String response = await rootBundle.loadString('assets/data/programs.json');
+    final data = await json.decode(response);
+    final List<dynamic> programList = data['programs'];
+    final programJson = programList.firstWhere((program) => program['id'] == id);
+    return Program.fromJson(programJson);
+  }
 }

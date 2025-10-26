@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:madg28/notifiers/program_detail_notifier.dart';
+import 'package:madg28/notifiers/programs_notifier.dart';
 import 'package:madg28/screens/home/program_listing.dart';
 import 'package:madg28/screens/profile_and_settings/settings_screen.dart'; // Updated import
 import 'package:madg28/screens/profile_and_settings/profile_screen.dart';
@@ -23,6 +25,8 @@ void main() async {
         ChangeNotifierProvider(create: (_) => ThemeNotifier(initialThemeMode)),
         ChangeNotifierProvider(create: (_) => LocaleProvider()),
         ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => ProgramsNotifier()),
+        ChangeNotifierProvider(create: (_) => ProgramDetailNotifier()),
       ],
       child: const MyApp(),
     ),

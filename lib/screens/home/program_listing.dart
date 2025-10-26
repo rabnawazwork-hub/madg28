@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:madg28/models/mockapi.dart';
-import 'package:madg28/models/program.dart';
-import 'package:madg28/screens/program_detail_screen.dart'; // Corrected import
+import 'package:madg28/notifiers/programs_notifier.dart';
+import 'package:madg28/screens/program_detail_screen.dart';
 import 'package:madg28/screens/search/search_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:skeletons/skeletons.dart';
 
 class ProgramListingScreen extends StatefulWidget {
   const ProgramListingScreen({super.key});
@@ -12,22 +13,11 @@ class ProgramListingScreen extends StatefulWidget {
 }
 
 class _ProgramListingScreenState extends State<ProgramListingScreen> {
-  List<Program> _programs = [];
-  bool _isLoading = true;
-
   @override
   void initState() {
     super.initState();
-    _fetchPrograms();
-  }
-
-  Future<void> _fetchPrograms() async {
-    final apiService = MockApiService();
-    final programs = await apiService.getPrograms();
-    setState(() {
-      _programs = programs;
-      _isLoading = false;
-    });
+    // Fetch programs when the widget is first created
+    Provider.of<ProgramsNotifier>(context, listen: false).fetchPrograms();
   }
 
   @override
@@ -48,30 +38,50 @@ class _ProgramListingScreenState extends State<ProgramListingScreen> {
           ),
         ],
       ),
-      body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : GridView.builder(
-              padding: const EdgeInsets.all(16.0),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 16.0,
-                mainAxisSpacing: 16.0,
-                childAspectRatio: 0.75,
+      body: Consumer<ProgramsNotifier>(
+        builder: (context, notifier, child) {
+          if (notifier.isLoading) {
+            return SkeletonTheme(
+              themeMode: ThemeMode.light,
+              shimmerGradient: const LinearGradient(
+                colors: [
+                  Color(0xFFD8E3E7),
+                  Color(0xFFC8D5DA),
+                  Color(0xFFD8E3E7),
+                ],
+                stops: [
+                  0.1,
+                  0.5,
+                  0.9,
+                ],
               ),
-              itemCount: _programs.length,
-              itemBuilder: (context, index) {
-                final program = _programs[index];
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            ProgramDetailScreen(program: program), // Corrected widget
-                      ),
-                    );
-                  },
-                  child: Card(
+              darkShimmerGradient: const LinearGradient(
+                colors: [
+                  Color(0xFF222222),
+                  Color(0xFF242424),
+                  Color(0xFF2B2B2B),
+                  Color(0xFF242424),
+                  Color(0xFF222222),
+                ],
+                stops: [
+                  0.0,
+                  0.2,
+                  0.5,
+                  0.8,
+                  1,
+                ],
+              ),
+              child: GridView.builder(
+                padding: const EdgeInsets.all(16.0),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16.0,
+                  mainAxisSpacing: 16.0,
+                  childAspectRatio: 0.75,
+                ),
+                itemCount: 6, // Number of skeleton items
+                itemBuilder: (context, index) {
+                  return Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
@@ -79,19 +89,14 @@ class _ProgramListingScreenState extends State<ProgramListingScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Hero(
-                          tag: 'program-${program.id}', // Hero tag for animation
-                          child: ClipRRect(
-                            borderRadius: const BorderRadius.only(
+                        const SkeletonAvatar(
+                          style: SkeletonAvatarStyle(
+                            width: double.infinity,
+                            height: 120,
+                            borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(15.0),
                               topRight: Radius.circular(15.0),
                             ),
-                            child: Image(
-                                image: program.imageProvider, // Use imageProvider
-                                height: 120,
-                                width: double.infinity,
-                                fit: BoxFit.cover,
-                              ),
                           ),
                         ),
                         Padding(
@@ -99,21 +104,19 @@ class _ProgramListingScreenState extends State<ProgramListingScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                program.name,
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
+                              const SkeletonLine(
+                                style: SkeletonLineStyle(
+                                  height: 16,
+                                  width: 100,
+                                  borderRadius: BorderRadius.all(Radius.circular(8)),
                                 ),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
                               ),
                               const SizedBox(height: 4),
-                              Text(
-                                "Instructor: ${program.instructor}", // Use program.instructor
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.grey[600],
+                              const SkeletonLine(
+                                style: SkeletonLineStyle(
+                                  height: 12,
+                                  width: 150,
+                                  borderRadius: BorderRadius.all(Radius.circular(8)),
                                 ),
                               ),
                               const SizedBox(height: 4),
@@ -121,20 +124,20 @@ class _ProgramListingScreenState extends State<ProgramListingScreen> {
                                 children: [
                                   ...List.generate(
                                     5,
-                                    (i) => Icon(
-                                      Icons.star,
-                                      color: i < program.rating.floor()
-                                          ? Colors.amber
-                                          : Colors.grey,
-                                      size: 16,
+                                    (i) => const SkeletonAvatar(
+                                      style: SkeletonAvatarStyle(
+                                        width: 16,
+                                        height: 16,
+                                        shape: BoxShape.circle,
+                                      ),
                                     ),
                                   ),
                                   const SizedBox(width: 4),
-                                  Text(
-                                    "${program.rating}", // Use program.rating
-                                    style: const TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold,
+                                  const SkeletonLine(
+                                    style: SkeletonLineStyle(
+                                      height: 12,
+                                      width: 30,
+                                      borderRadius: BorderRadius.all(Radius.circular(8)),
                                     ),
                                   ),
                                 ],
@@ -144,10 +147,112 @@ class _ProgramListingScreenState extends State<ProgramListingScreen> {
                         ),
                       ],
                     ),
-                  ),
-                );
-              },
+                  );
+                },
+              ),
+            );
+          }
+
+          return GridView.builder(
+            padding: const EdgeInsets.all(16.0),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 16.0,
+              mainAxisSpacing: 16.0,
+              childAspectRatio: 0.75,
             ),
+            itemCount: notifier.programs.length,
+            itemBuilder: (context, index) {
+              final program = notifier.programs[index];
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          ProgramDetailScreen(programId: program.id),
+                    ),
+                  );
+                },
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  elevation: 5,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Hero(
+                        tag: 'program-${program.id}',
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(15.0),
+                            topRight: Radius.circular(15.0),
+                          ),
+                          child: Image(
+                            image: program.imageProvider,
+                            height: 120,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              program.name,
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              "Instructor: ${program.instructor}",
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Row(
+                              children: [
+                                ...List.generate(
+                                  5,
+                                  (i) => Icon(
+                                    Icons.star,
+                                    color: i < program.rating.floor()
+                                        ? Colors.amber
+                                        : Colors.grey,
+                                    size: 16,
+                                  ),
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  "${program.rating}",
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        },
+      ),
     );
   }
 }
