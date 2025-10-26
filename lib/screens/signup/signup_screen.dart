@@ -3,6 +3,8 @@ import '../../main.dart';
 import '../login/login_screen.dart';
 import '../../widgets/custom_password_field.dart';
 import '../../widgets/social_login_button.dart';
+import 'package:provider/provider.dart';
+import '../../providers/user_provider.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -21,12 +23,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
+      final userProvider = Provider.of<UserProvider>(context, listen: false);
+      userProvider.setUser(
+        name: _nameController.text.trim(),
+        email: _emailController.text.trim(),
+      );
+
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const MainScreen()),
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {

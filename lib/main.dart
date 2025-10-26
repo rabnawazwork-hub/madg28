@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:madg28/screens/home/program_listing.dart';
-import 'package:madg28/screens/profile_and_settings/profile_and_settings_screen.dart'; // Updated import
+import 'package:madg28/screens/profile_and_settings/settings_screen.dart'; // Updated import
+import 'package:madg28/screens/profile_and_settings/profile_screen.dart';
+import 'package:madg28/screens/profile_and_settings/edit_profile_screen.dart';
 import 'screens/login/login_screen.dart';
 import 'screens/signup/signup_screen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -8,13 +10,19 @@ import 'package:madg28/screens/course/enrolled_courses_screen.dart';
 import 'package:madg28/screens/search/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:madg28/theme_notifier.dart';
+import 'package:madg28/providers/locale_provider.dart';
+import 'package:madg28/providers/user_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   ThemeMode initialThemeMode = await ThemeNotifier.getThemeModeFromPrefs();
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeNotifier(initialThemeMode),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeNotifier(initialThemeMode)),
+        ChangeNotifierProvider(create: (_) => LocaleProvider()),
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+      ],
       child: const MyApp(),
     ),
   );
@@ -53,6 +61,7 @@ class MyApp extends StatelessWidget {
           routes: {
             LoginScreen.routeName: (context) => const LoginScreen(),
             SignUpScreen.routeName: (context) => const SignUpScreen(),
+            EditProfileScreen.routeName: (context) => const EditProfileScreen(),
           },
         );
       },
@@ -73,7 +82,7 @@ class _MainScreenState extends State<MainScreen> {
     ProgramListingScreen(),
     SearchScreen(),
     EnrolledCoursesScreen(),
-    ProfileAndSettingsScreen(), // Updated to new combined screen
+    ProfileScreen(), // Updated to new combined screen
   ];
 
   void _onItemTapped(int index) {
