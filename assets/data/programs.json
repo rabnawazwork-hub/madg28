@@ -1,1004 +1,1604 @@
 {
   "programs": [
-    {
-      "id": "1",
-      "name": "Course 1: Introduction to Flutter Development",
-      "description": "A comprehensive guide to building beautiful and high-performance mobile applications with Flutter.",
-      "imageUrl": " ",
-      "instructor": "John Doe",
-      "level": "Beginner",
-      "duration": "4 weeks",
-      "rating": 4.5,
-      "whatYouWillLearn": [
-        "Build a complete application from scratch.",
-        "Use the latest tools and technologies.",
-        "Deploy your application to the cloud."
-      ],
-      "lessons": [
-        {"id": "101", "title": "Setting up your Development Environment", "duration": "20:00"},
-        {"id": "102", "title": "Understanding Widgets", "duration": "45:00"},
-        {"id": "103", "title": "Building Layouts", "duration": "35:00"}
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Course 2: Advanced Flutter UI",
-      "description": "Master the art of creating stunning and complex user interfaces with advanced Flutter techniques.",
-      "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSWkxDaiD0RDp9ysEbw_6p6FJhdqane5nhvgipHj6idY7DJNCDnqiZarDm0dl2q",
-      "instructor": "Jane Smith",
-      "level": "Intermediate",
-      "duration": "6 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Create custom animations and transitions.",
-        "Work with slivers to create complex scrolling effects.",
-        "Build responsive layouts for different screen sizes."
-      ],
-      "lessons": [
-        {"id": "201", "title": "Custom Painting and Animations", "duration": "50:00"},
-        {"id": "202", "title": "Working with Slivers", "duration": "40:00"},
-        {"id": "203", "title": "Responsive Design", "duration": "30:00"}
-      ]
-    },
-    {
-      "id": "3",
-      "name": "Course 3: State Management in Flutter",
-      "description": "Learn various state management techniques in Flutter, including Provider, BLoC, and Riverpod.",
-      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQR5iQKYZBmqE4GcxvOIdA3zxhT8HwYawmjnA9DI2goCcah5d-L5VeYek24SDyK",
-      "instructor": "Peter Jones",
-      "level": "Intermediate",
-      "duration": "5 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Understand the importance of state management.",
-        "Implement different state management solutions.",
-        "Choose the right state management approach for your app."
-      ],
-      "lessons": [
-        {"id": "301", "title": "Introduction to State Management", "duration": "25:00"},
-        {"id": "302", "title": "Using the Provider Package", "duration": "45:00"},
-        {"id": "303", "title": "Implementing the BLoC Pattern", "duration": "60:00"}
-      ]
-    },
-    {
-      "id": "4",
-      "name": "Course 4: Firebase for Flutter",
-      "description": "Integrate Firebase services into your Flutter apps, including authentication, database, and storage.",
-      "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSc9DSChA0j9m4p3NkPPHb4yyskwB7bo1_1Stac-cUoW8eV1Nrb6ICet2dRtdDr",
-      "instructor": "Mary Johnson",
-      "level": "Beginner",
-      "duration": "4 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Set up Firebase in your Flutter project.",
-        "Authenticate users with Firebase Authentication.",
-        "Store and retrieve data from Cloud Firestore."
-      ],
-      "lessons": [
-        {"id": "401", "title": "Setting up Firebase", "duration": "15:00"},
-        {"id": "402", "title": "Firebase Authentication", "duration": "40:00"},
-        {"id": "403", "title": "Cloud Firestore", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "5",
-      "name": "Course 5: Testing Flutter Apps",
-      "description": "A complete guide to testing your Flutter applications, including unit, widget, and integration tests.",
-      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP6RqGeiqHvApYvKeuZbSxQ5tKzZfxBvrkV_kbAjrZ138eIs9aLORZ7ICcczSW",
-      "instructor": "David Williams",
-      "level": "Intermediate",
-      "duration": "5 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Write unit tests for your business logic.",
-        "Write widget tests for your UI components.",
-        "Write integration tests for your entire app."
-      ],
-      "lessons": [
-        {"id": "501", "title": "Introduction to Testing", "duration": "20:00"},
-        {"id": "502", "title": "Unit Testing", "duration": "35:00"},
-        {"id": "503", "title": "Widget Testing", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "6",
-      "name": "Course 6: Dart Programming for Beginners",
-      "description": "Learn the fundamentals of the Dart programming language, the language behind Flutter.",
-      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQcfOilwK525NbOaa3Jx0nRfzQg9oWClhrHvcZnv2JYsIM4HiuouzEvTVsXF3ZL",
-      "instructor": "John Doe",
-      "level": "Beginner",
-      "duration": "4 weeks",
-      "rating": 4.4,
-      "whatYouWillLearn": [
-        "Understand the basics of the Dart language.",
-        "Write clean and efficient Dart code.",
-        "Apply your Dart knowledge to build Flutter apps."
-      ],
-      "lessons": [
-        {"id": "601", "title": "Variables and Data Types", "duration": "30:00"},
-        {"id": "602", "title": "Control Flow and Functions", "duration": "40:00"},
-        {"id": "603", "title": "Object-Oriented Programming in Dart", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "7",
-      "name": "Course 7: Advanced Dart Concepts",
-      "description": "Dive deep into advanced Dart concepts like streams, futures, and isolates.",
-      "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQduKqHMpVRq1UDuFVJnvuNyndvEShDb-ARxhDkWF1ngoxenGzHIlniYZyJT12s",
-      "instructor": "Jane Smith",
-      "level": "Advanced",
-      "duration": "6 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Master asynchronous programming in Dart.",
-        "Work with streams to handle sequences of events.",
-        "Use isolates to perform concurrent programming."
-      ],
-      "lessons": [
-        {"id": "701", "title": "Asynchronous Programming with Futures", "duration": "45:00"},
-        {"id": "702", "title": "Working with Streams", "duration": "50:00"},
-        {"id": "703", "title": "Concurrency with Isolates", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "8",
-      "name": "Course 8: Building a Backend with Dart and Shelf",
-      "description": "Learn how to build a backend for your Flutter apps using the Dart language and the Shelf framework.",
-      "imageUrl": "https://medium.com/@mehedi05739/building-a-dart-backend-with-shelf-orm-authentication-and-file-uploads-complete-guide-23177122f4ed",
-      "instructor": "Peter Jones",
-      "level": "Intermediate",
-      "duration": "5 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Build a RESTful API with Dart and Shelf.",
-        "Connect your backend to a database.",
-        "Deploy your Dart backend to the cloud."
-      ],
-      "lessons": [
-        {"id": "801", "title": "Introduction to Backend Development", "duration": "20:00"},
-        {"id": "802", "title": "Creating a REST API with Shelf", "duration": "50:00"},
-        {"id": "803", "title": "Connecting to a Database", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "9",
-      "name": "Course 9: Machine Learning with Flutter",
-      "description": "Integrate machine learning models into your Flutter apps using TensorFlow Lite.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Advanced",
-      "duration": "8 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Understand the basics of machine learning.",
-        "Use TensorFlow Lite to run ML models in your Flutter app.",
-        "Build a real-world ML-powered Flutter app."
-      ],
-      "lessons": [
-        {"id": "901", "title": "Introduction to Machine Learning", "duration": "30:00"},
-        {"id": "902", "title": "Using TensorFlow Lite in Flutter", "duration": "50:00"},
-        {"id": "903", "title": "Building a Custom Image Classification App", "duration": "60:00"}
-      ]
-    },
-    {
-      "id": "10",
-      "name": "Course 10: Augmented Reality with Flutter",
-      "description": "Create immersive augmented reality experiences in your Flutter apps.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Advanced",
-      "duration": "7 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Understand the fundamentals of augmented reality.",
-        "Use ARKit and ARCore to create AR experiences.",
-        "Build a practical AR application with Flutter."
-      ],
-      "lessons": [
-        {"id": "1001", "title": "Introduction to Augmented Reality", "duration": "25:00"},
-        {"id": "1002", "title": "Using ARKit and ARCore with Flutter", "duration": "55:00"},
-        {"id": "1003", "title": "Building a Simple AR App", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "11",
-      "name": "Course 11: Game Development with Flutter and Flame",
-      "description": "Learn how to build 2D games with Flutter and the Flame game engine.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Beginner",
-      "duration": "6 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Learn the basics of game development.",
-        "Create a 2D game from scratch using Flame.",
-        "Publish your game to the app stores."
-      ],
-      "lessons": [
-        {"id": "1101", "title": "Introduction to Game Development", "duration": "20:00"},
-        {"id": "1102", "title": "Getting Started with Flame", "duration": "40:00"},
-        {"id": "1103", "title": "Building a Simple Platformer Game", "duration": "60:00"}
-      ]
-    },
-    {
-      "id": "12",
-      "name": "Course 12: Publishing your Flutter App",
-      "description": "A step-by-step guide to publishing your Flutter app to the Apple App Store and Google Play Store.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Beginner",
-      "duration": "3 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Prepare your app for release.",
-        "Publish your app to the Google Play Store.",
-        "Publish your app to the Apple App Store."
-      ],
-      "lessons": [
-        {"id": "1201", "title": "Preparing for Release", "duration": "30:00"},
-        {"id": "1202", "title": "Publishing to the Google Play Store", "duration": "45:00"},
-        {"id": "1203", "title": "Publishing to the Apple App Store", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "13",
-      "name": "Course 13: CI/CD for Flutter Apps",
-      "description": "Set up a continuous integration and continuous delivery pipeline for your Flutter apps using GitHub Actions.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Intermediate",
-      "duration": "4 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Automate your build, test, and release process.",
-        "Set up a CI/CD pipeline with GitHub Actions.",
-        "Improve the quality and reliability of your app."
-      ],
-      "lessons": [
-        {"id": "1301", "title": "Introduction to CI/CD", "duration": "25:00"},
-        {"id": "1302", "title": "Setting up GitHub Actions", "duration": "45:00"},
-        {"id": "1303", "title": "Automating your Build and Release Process", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "14",
-      "name": "Course 14: Flutter for Web",
-      "description": "Learn how to build and deploy web applications with Flutter.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Intermediate",
-      "duration": "5 weeks",
-      "rating": 4.5,
-      "whatYouWillLearn": [
-        "Build responsive web apps with Flutter.",
-        "Deploy your Flutter web app to a hosting service.",
-        "Understand the differences between Flutter for mobile and web."
-      ],
-      "lessons": [
-        {"id": "1401", "title": "Introduction to Flutter for Web", "duration": "20:00"},
-        {"id": "1402", "title": "Building a Responsive Web App", "duration": "50:00"},
-        {"id": "1403", "title": "Deploying your Web App", "duration": "35:00"}
-      ]
-    },
-    {
-      "id": "15",
-      "name": "Course 15: Flutter for Desktop",
-      "description": "Learn how to build and deploy desktop applications for Windows, macOS, and Linux with Flutter.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Intermediate",
-      "duration": "6 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Build desktop apps for multiple platforms from a single codebase.",
-        "Package and distribute your desktop app.",
-        "Access native desktop features from your Flutter app."
-      ],
-      "lessons": [
-        {"id": "1501", "title": "Introduction to Flutter for Desktop", "duration": "20:00"},
-        {"id": "1502", "title": "Building a Desktop App", "duration": "55:00"},
-        {"id": "1503", "title": "Packaging and Distributing your Desktop App", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "16",
-      "name": "Course 16: The Complete Guide to React Native",
-      "description": "Build native mobile apps for iOS and Android using React Native.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Beginner",
-      "duration": "8 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Build native mobile apps with JavaScript and React.",
-        "Understand the React Native ecosystem.",
-        "Publish your React Native app to the app stores."
-      ],
-      "lessons": [
-        {"id": "1601", "title": "Introduction to React Native", "duration": "25:00"},
-        {"id": "1602", "title": "Building your First React Native App", "duration": "45:00"},
-        {"id": "1603", "title": "Styling and Layouts", "duration": "35:00"}
-      ]
-    },
-    {
-      "id": "17",
-      "name": "Course 17: Advanced React Native Concepts",
-      "description": "Master advanced concepts in React Native, including animations, gestures, and native modules.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Advanced",
-      "duration": "7 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Create complex animations and gestures.",
-        "Bridge native code to your React Native app.",
-        "Optimize the performance of your React Native app."
-      ],
-      "lessons": [
-        {"id": "1701", "title": "Animations in React Native", "duration": "50:00"},
-        {"id": "1702", "title": "Handling Gestures", "duration": "40:00"},
-        {"id": "1703", "title": "Working with Native Modules", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "18",
-      "name": "Course 18: State Management in React Native",
-      "description": "Learn various state management libraries for React Native, including Redux and MobX.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Intermediate",
-      "duration": "5 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Understand the challenges of state management in large apps.",
-        "Implement Redux and MobX in your React Native app.",
-        "Choose the right state management library for your project."
-      ],
-      "lessons": [
-        {"id": "1801", "title": "Introduction to State Management", "duration": "20:00"},
-        {"id": "1802", "title": "Using Redux with React Native", "duration": "50:00"},
-        {"id": "1803", "title": "Using MobX with React Native", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "19",
-      "name": "Course 19: Building a Backend with Node.js and Express",
-      "description": "Create a RESTful API for your mobile apps using Node.js and Express.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Intermediate",
-      "duration": "6 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Build a secure and scalable backend API.",
-        "Connect your API to a database.",
-        "Deploy your backend to a cloud platform."
-      ],
-      "lessons": [
-        {"id": "1901", "title": "Introduction to Node.js", "duration": "25:00"},
-        {"id": "1902", "title": "Building a REST API with Express", "duration": "55:00"},
-        {"id": "1903", "title": "Connecting to a MongoDB Database", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "20",
-      "name": "Course 20: The Complete Guide to Swift Programming",
-      "description": "Learn the Swift programming language from scratch and build iOS apps.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Beginner",
-      "duration": "8 weeks",
-      "rating": 4.5,
-      "whatYouWillLearn": [
-        "Master the fundamentals of the Swift language.",
-        "Build a complete iOS app from scratch.",
-        "Publish your app to the Apple App Store."
-      ],
-      "lessons": [
-        {"id": "2001", "title": "Introduction to Swift", "duration": "30:00"},
-        {"id": "2002", "title": "Control Flow and Functions", "duration": "40:00"},
-        {"id": "2003", "title": "Object-Oriented Programming in Swift", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "21",
-      "name": "Course 21: iOS App Development with SwiftUI",
-      "description": "Build beautiful and declarative user interfaces for your iOS apps with SwiftUI.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Beginner",
-      "duration": "7 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Build modern iOS apps with SwiftUI.",
-        "Understand the declarative UI paradigm.",
-        "Create complex layouts and animations."
-      ],
-      "lessons": [
-        {"id": "2101", "title": "Introduction to SwiftUI", "duration": "25:00"},
-        {"id": "2102", "title": "Building Layouts with SwiftUI", "duration": "45:00"},
-        {"id": "2103", "title": "State and Data Flow", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "22",
-      "name": "Course 22: The Complete Guide to Kotlin Programming",
-      "description": "Learn the Kotlin programming language, the official language for Android development.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Beginner",
-      "duration": "8 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Master the fundamentals of the Kotlin language.",
-        "Build a complete Android app from scratch.",
-        "Publish your app to the Google Play Store."
-      ],
-      "lessons": [
-        {"id": "2201", "title": "Introduction to Kotlin", "duration": "30:00"},
-        {"id": "2202", "title": "Control Flow and Functions", "duration": "40:00"},
-        {"id": "2203", "title": "Object-Oriented Programming in Kotlin", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "23",
-      "name": "Course 23: Android App Development with Jetpack Compose",
-      "description": "Build modern and native Android apps with Jetpack Compose, Android's new declarative UI toolkit.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Beginner",
-      "duration": "7 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Build modern Android apps with Jetpack Compose.",
-        "Understand the declarative UI paradigm.",
-        "Create beautiful and responsive layouts."
-      ],
-      "lessons": [
-        {"id": "2301", "title": "Introduction to Jetpack Compose", "duration": "25:00"},
-        {"id": "2302", "title": "Building Layouts with Jetpack Compose", "duration": "45:00"},
-        {"id": "2303", "title": "State and Recomposition", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "24",
-      "name": "Course 24: Data Science with Python",
-      "description": "Learn the fundamentals of data science and machine learning with Python.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Intermediate",
-      "duration": "10 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Analyze and visualize data with Python.",
-        "Build machine learning models with scikit-learn.",
-        "Apply your data science skills to real-world problems."
-      ],
-      "lessons": [
-        {"id": "2401", "title": "Introduction to Data Science", "duration": "20:00"},
-        {"id": "2402", "title": "Data Analysis with Pandas", "duration": "50:00"},
-        {"id": "2403", "title": "Machine Learning with Scikit-learn", "duration": "60:00"}
-      ]
-    },
-    {
-      "id": "25",
-      "name": "Course 25: Deep Learning with TensorFlow",
-      "description": "A comprehensive guide to deep learning with TensorFlow, Google's open-source machine learning framework.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Advanced",
-      "duration": "12 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Build and train deep neural networks.",
-        "Use TensorFlow to solve complex problems.",
-        "Understand the latest deep learning architectures."
-      ],
-      "lessons": [
-        {"id": "2501", "title": "Introduction to Deep Learning", "duration": "30:00"},
-        {"id": "2502", "title": "Building Neural Networks with TensorFlow", "duration": "55:00"},
-        {"id": "2503", "title": "Convolutional Neural Networks", "duration": "60:00"}
-      ]
-    },
-    {
-      "id": "26",
-      "name": "Course 26: Natural Language Processing with Python",
-      "description": "Learn how to process and analyze text data with Python and popular NLP libraries.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Advanced",
-      "duration": "10 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Perform sentiment analysis on text data.",
-        "Build a chatbot from scratch.",
-        "Use NLP to solve real-world problems."
-      ],
-      "lessons": [
-        {"id": "2601", "title": "Introduction to NLP", "duration": "25:00"},
-        {"id": "2602", "title": "Text Preprocessing and Vectorization", "duration": "45:00"},
-        {"id": "2603", "title": "Sentiment Analysis", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "27",
-      "name": "Course 27: Computer Vision with OpenCV and Python",
-      "description": "Learn the fundamentals of computer vision and image processing with OpenCV and Python.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Advanced",
-      "duration": "10 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Perform image processing and manipulation.",
-        "Detect objects and faces in images and videos.",
-        "Build computer vision applications with OpenCV."
-      ],
-      "lessons": [
-        {"id": "2701", "title": "Introduction to Computer Vision", "duration": "25:00"},
-        {"id": "2702", "title": "Image Processing with OpenCV", "duration": "50:00"},
-        {"id": "2703", "title": "Object Detection", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "28",
-      "name": "Course 28: Web Development with HTML, CSS, and JavaScript",
-      "description": "The ultimate guide to modern web development, covering the fundamental technologies of the web.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Beginner",
-      "duration": "12 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Build beautiful and responsive websites.",
-        "Master the fundamentals of HTML, CSS, and JavaScript.",
-        "Create interactive and dynamic web pages."
-      ],
-      "lessons": [
-        {"id": "2801", "title": "Introduction to HTML", "duration": "30:00"},
-        {"id": "2802", "title": "Styling with CSS", "duration": "45:00"},
-        {"id": "2803", "title": "JavaScript Fundamentals", "duration": "60:00"}
-      ]
-    },
-    {
-      "id": "29",
-      "name": "Course 29: The Complete Guide to React.js",
-      "description": "Build modern and interactive user interfaces for the web with React.js.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Intermediate",
-      "duration": "10 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Build complex and scalable web applications with React.",
-        "Master the React ecosystem, including Redux and React Router.",
-        "Write clean and maintainable React code."
-      ],
-      "lessons": [
-        {"id": "2901", "title": "Introduction to React", "duration": "25:00"},
-        {"id": "2902", "title": "Components, Props, and State", "duration": "45:00"},
-        {"id": "2903", "title": "Hooks in React", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "30",
-      "name": "Course 30: The Complete Guide to Angular",
-      "description": "Build powerful and scalable web applications with the Angular framework.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Intermediate",
-      "duration": "12 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Build enterprise-grade web applications with Angular.",
-        "Master the Angular framework and its core concepts.",
-        "Write clean and maintainable Angular code."
-      ],
-      "lessons": [
-        {"id": "3001", "title": "Introduction to Angular", "duration": "30:00"},
-        {"id": "3002", "title": "Components and Templates", "duration": "50:00"},
-        {"id": "3003", "title": "Services and Dependency Injection", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "31",
-      "name": "Course 31: The Complete Guide to Vue.js",
-      "description": "Build progressive and incrementally adoptable user interfaces with Vue.js.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Intermediate",
-      "duration": "8 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Build beautiful and performant web applications with Vue.js.",
-        "Master the Vue.js framework and its ecosystem.",
-        "Write clean and maintainable Vue.js code."
-      ],
-      "lessons": [
-        {"id": "3101", "title": "Introduction to Vue.js", "duration": "25:00"},
-        {"id": "3102", "title": "Components and Props", "duration": "40:00"},
-        {"id": "3103", "title": "State Management with Vuex", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "32",
-      "name": "Course 32: Building a Full-Stack Web App with the MERN Stack",
-      "description": "Learn how to build a complete web application from scratch using MongoDB, Express, React, and Node.js.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Advanced",
-      "duration": "14 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Build a full-stack web application from end to end.",
-        "Master the MERN stack and its components.",
-        "Deploy your application to the cloud."
-      ],
-      "lessons": [
-        {"id": "3201", "title": "Setting up the Project", "duration": "20:00"},
-        {"id": "3202", "title": "Building the Backend API", "duration": "60:00"},
-        {"id": "3203", "title": "Building the Frontend with React", "duration": "75:00"}
-      ]
-    },
-    {
-      "id": "33",
-      "name": "Course 33: The Complete Guide to Python Programming",
-      "description": "Learn the Python programming language from scratch, from the basics to advanced concepts.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Beginner",
-      "duration": "10 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Master the fundamentals of the Python language.",
-        "Write clean and efficient Python code.",
-        "Apply your Python skills to various domains."
-      ],
-      "lessons": [
-        {"id": "3301", "title": "Introduction to Python", "duration": "30:00"},
-        {"id": "3302", "title": "Data Structures in Python", "duration": "45:00"},
-        {"id": "3303", "title": "Object-Oriented Programming in Python", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "34",
-      "name": "Course 34: The Complete Guide to Java Programming",
-      "description": "Learn the Java programming language, one of the most popular and widely used languages in the world.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Beginner",
-      "duration": "12 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Master the fundamentals of the Java language.",
-        "Write robust and scalable Java applications.",
-        "Prepare for Java certification exams."
-      ],
-      "lessons": [
-        {"id": "3401", "title": "Introduction to Java", "duration": "30:00"},
-        {"id": "3402", "title": "Object-Oriented Programming in Java", "duration": "50:00"},
-        {"id": "3403", "title": "The Java Collections Framework", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "35",
-      "name": "Course 35: The Complete Guide to C++ Programming",
-      "description": "Learn the C++ programming language, a powerful and high-performance language used in various domains.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Intermediate",
-      "duration": "14 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Master the C++ language and its features.",
-        "Write high-performance and memory-efficient code.",
-        "Prepare for technical interviews."
-      ],
-      "lessons": [
-        {"id": "3501", "title": "Introduction to C++", "duration": "35:00"},
-        {"id": "3502", "title": "Pointers and Memory Management", "duration": "50:00"},
-        {"id": "3503", "title": "The C++ Standard Template Library (STL)", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "36",
-      "name": "Course 36: The Complete Guide to C# Programming",
-      "description": "Learn the C# programming language and build applications for the .NET platform.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Intermediate",
-      "duration": "10 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Master the C# language and the .NET framework.",
-        "Build web and desktop applications with C#.",
-        "Prepare for Microsoft certification exams."
-      ],
-      "lessons": [
-        {"id": "3601", "title": "Introduction to C#", "duration": "30:00"},
-        {"id": "3602", "title": "Object-Oriented Programming in C#", "duration": "45:00"},
-        {"id": "3603", "title": "Building a .NET Application", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "37",
-      "name": "Course 37: The Complete Guide to Go Programming",
-      "description": "Learn the Go programming language, a fast and concurrent language developed by Google.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Intermediate",
-      "duration": "8 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Master the Go language and its concurrency features.",
-        "Build high-performance and scalable network services.",
-        "Write clean and idiomatic Go code."
-      ],
-      "lessons": [
-        {"id": "3701", "title": "Introduction to Go", "duration": "30:00"},
-        {"id": "3702", "title": "Concurrency in Go", "duration": "50:00"},
-        {"id": "3703", "title": "Building a Web Service with Go", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "38",
-      "name": "Course 38: The Complete Guide to Rust Programming",
-      "description": "Learn the Rust programming language, a language focused on safety, speed, and concurrency.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Advanced",
-      "duration": "12 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Master the Rust language and its ownership system.",
-        "Write safe and concurrent code without a garbage collector.",
-        "Build high-performance systems and applications."
-      ],
-      "lessons": [
-        {"id": "3801", "title": "Introduction to Rust", "duration": "35:00"},
-        {"id": "3802", "title": "Ownership and Borrowing", "duration": "50:00"},
-        {"id": "3803", "title": "Concurrency in Rust", "duration": "55:00"}
-      ]
-    },
-    {
-      "id": "39",
-      "name": "Course 39: The Complete Guide to TypeScript",
-      "description": "Learn TypeScript, a typed superset of JavaScript that compiles to plain JavaScript.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Intermediate",
-      "duration": "6 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Add static types to your JavaScript code.",
-        "Catch errors at compile time instead of runtime.",
-        "Build large-scale and maintainable JavaScript applications."
-      ],
-      "lessons": [
-        {"id": "3901", "title": "Introduction to TypeScript", "duration": "25:00"},
-        {"id": "3902", "title": "Types and Interfaces", "duration": "40:00"},
-        {"id": "3903", "title": "Using TypeScript with React", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "40",
-      "name": "Course 40: The Complete Guide to GraphQL",
-      "description": "Learn GraphQL, a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Intermediate",
-      "duration": "7 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Build flexible and efficient APIs with GraphQL.",
-        "Understand the GraphQL query language and schema.",
-        "Use GraphQL with your favorite frontend framework."
-      ],
-      "lessons": [
-        {"id": "4001", "title": "Introduction to GraphQL", "duration": "30:00"},
-        {"id": "4002", "title": "Building a GraphQL Server", "duration": "55:00"},
-        {"id": "4003", "title": "Using GraphQL with React", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "41",
-      "name": "Course 41: The Complete Guide to Docker",
-      "description": "Learn how to use Docker to create, deploy, and run applications in containers.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Beginner",
-      "duration": "5 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Containerize your applications with Docker.",
-        "Create and manage Docker images and containers.",
-        "Use Docker Compose to run multi-container applications."
-      ],
-      "lessons": [
-        {"id": "4101", "title": "Introduction to Docker", "duration": "25:00"},
-        {"id": "4102", "title": "Creating Docker Images", "duration": "45:00"},
-        {"id": "4103", "title": "Docker Compose", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "42",
-      "name": "Course 42: The Complete Guide to Kubernetes",
-      "description": "Learn how to deploy, manage, and scale containerized applications with Kubernetes.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Advanced",
-      "duration": "10 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Deploy and manage containerized applications at scale.",
-        "Understand the architecture and concepts of Kubernetes.",
-        "Use Kubernetes to build resilient and scalable systems."
-      ],
-      "lessons": [
-        {"id": "4201", "title": "Introduction to Kubernetes", "duration": "30:00"},
-        {"id": "4202", "title": "Deploying Applications with Kubernetes", "duration": "55:00"},
-        {"id": "4203", "title": "Scaling and Managing Applications", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "43",
-      "name": "Course 43: The Complete Guide to AWS",
-      "description": "Learn the fundamentals of Amazon Web Services (AWS) and its core services.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Beginner",
-      "duration": "12 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Understand the AWS cloud and its core services.",
-        "Launch and manage virtual servers with EC2.",
-        "Store and retrieve data with S3."
-      ],
-      "lessons": [
-        {"id": "4301", "title": "Introduction to AWS", "duration": "25:00"},
-        {"id": "4302", "title": "EC2 and S3", "duration": "45:00"},
-        {"id": "4303", "title": "IAM and VPC", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "44",
-      "name": "Course 44: The Complete Guide to Google Cloud Platform (GCP)",
-      "description": "Learn the fundamentals of Google Cloud Platform (GCP) and its core services.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Beginner",
-      "duration": "12 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Understand the GCP cloud and its core services.",
-        "Launch and manage virtual machines with Compute Engine.",
-        "Store and retrieve data with Cloud Storage."
-      ],
-      "lessons": [
-        {"id": "4401", "title": "Introduction to GCP", "duration": "25:00"},
-        {"id": "4402", "title": "Compute Engine and Cloud Storage", "duration": "45:00"},
-        {"id": "4403", "title": "IAM and VPC", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "45",
-      "name": "Course 45: The Complete Guide to Microsoft Azure",
-      "description": "Learn the fundamentals of Microsoft Azure and its core services.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Beginner",
-      "duration": "12 weeks",
-      "rating": 4.6,
-      "whatYouWillLearn": [
-        "Understand the Azure cloud and its core services.",
-        "Launch and manage virtual machines with Azure VMs.",
-        "Store and retrieve data with Azure Blob Storage."
-      ],
-      "lessons": [
-        {"id": "4501", "title": "Introduction to Azure", "duration": "25:00"},
-        {"id": "4502", "title": "Virtual Machines and Blob Storage", "duration": "45:00"},
-        {"id": "4503", "title": "Azure Active Directory and VNet", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "46",
-      "name": "Course 46: The Complete Guide to DevOps",
-      "description": "Learn the principles and practices of DevOps and how to implement them in your organization.",
-      "imageUrl": "",
-      "instructor": "John Doe",
-      "level": "Intermediate",
-      "duration": "10 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Understand the DevOps culture and principles.",
-        "Implement a CI/CD pipeline.",
-        "Use infrastructure as code to manage your infrastructure."
-      ],
-      "lessons": [
-        {"id": "4601", "title": "Introduction to DevOps", "duration": "30:00"},
-        {"id": "4602", "title": "Continuous Integration and Continuous Delivery", "duration": "50:00"},
-        {"id": "4603", "title": "Infrastructure as Code", "duration": "45:00"}
-      ]
-    },
-    {
-      "id": "47",
-      "name": "Course 47: The Complete Guide to Agile and Scrum",
-      "description": "Learn the principles and practices of Agile and Scrum and how to apply them to your projects.",
-      "imageUrl": "",
-      "instructor": "Jane Smith",
-      "level": "Beginner",
-      "duration": "6 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Understand the Agile mindset and principles.",
-        "Master the Scrum framework.",
-        "Run successful Scrum projects."
-      ],
-      "lessons": [
-        {"id": "4701", "title": "Introduction to Agile", "duration": "25:00"},
-        {"id": "4702", "title": "The Scrum Framework", "duration": "45:00"},
-        {"id": "4703", "title": "Running a Scrum Project", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "48",
-      "name": "Course 48: The Complete Guide to UI/UX Design",
-      "description": "Learn the fundamentals of UI/UX design and how to create beautiful and user-friendly digital products.",
-      "imageUrl": "",
-      "instructor": "Peter Jones",
-      "level": "Beginner",
-      "duration": "8 weeks",
-      "rating": 4.9,
-      "whatYouWillLearn": [
-        "Understand the principles of UI/UX design.",
-        "Conduct user research and create user personas.",
-        "Design wireframes and prototypes."
-      ],
-      "lessons": [
-        {"id": "4801", "title": "Introduction to UI/UX Design", "duration": "30:00"},
-        {"id": "4802", "title": "User Research and Personas", "duration": "45:00"},
-        {"id": "4803", "title": "Wireframing and Prototyping", "duration": "50:00"}
-      ]
-    },
-    {
-      "id": "49",
-      "name": "Course 49: The Complete Guide to Figma",
-      "description": "Learn how to use Figma to design, prototype, and collaborate on UI/UX projects.",
-      "imageUrl": "",
-      "instructor": "Mary Johnson",
-      "level": "Beginner",
-      "duration": "6 weeks",
-      "rating": 4.8,
-      "whatYouWillLearn": [
-        "Master the Figma interface and tools.",
-        "Design and prototype a complete mobile app.",
-        "Collaborate with your team in Figma."
-      ],
-      "lessons": [
-        {"id": "4901", "title": "Introduction to Figma", "duration": "25:00"},
-        {"id": "4902", "title": "Designing with Figma", "duration": "50:00"},
-        {"id": "4903", "title": "Prototyping and Collaboration", "duration": "40:00"}
-      ]
-    },
-    {
-      "id": "50",
-      "name": "Course 50: The Complete Guide to Adobe XD",
-      "description": "Learn how to use Adobe XD to design, prototype, and share user experiences.",
-      "imageUrl": "",
-      "instructor": "David Williams",
-      "level": "Beginner",
-      "duration": "6 weeks",
-      "rating": 4.7,
-      "whatYouWillLearn": [
-        "Master the Adobe XD interface and tools.",
-        "Design and prototype a complete website.",
-        "Share your designs for feedback and collaboration."
-      ],
-      "lessons": [
-        {"id": "5001", "title": "Introduction to Adobe XD", "duration": "25:00"},
-        {"id": "5002", "title": "Designing and Prototyping", "duration": "50:00"},
-        {"id": "5003", "title": "Sharing and Collaboration", "duration": "40:00"}
-      ]
-    }
+      {
+          "id": "1",
+          "name": "Course 1: Introduction to Flutter Development",
+          "description": "A comprehensive guide to building beautiful and high-performance mobile applications with Flutter.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*u70S_HwUu2v4tGn5V0K_7A.png",
+          "instructor": "John Doe",
+          "level": "Beginner",
+          "duration": "4 weeks",
+          "rating": 4.5,
+          "whatYouWillLearn": [
+              "Build a complete application from scratch.",
+              "Use the latest tools and technologies.",
+              "Deploy your application to the cloud."
+          ],
+          "lessons": [
+              {
+                  "id": "101",
+                  "title": "Setting up your Development Environment",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "102",
+                  "title": "Understanding Widgets",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "103",
+                  "title": "Building Layouts",
+                  "duration": "35:00"
+              }
+          ]
+      },
+      {
+          "id": "2",
+          "name": "Course 2: Advanced Flutter UI",
+          "description": "Master the art of creating stunning and complex user interfaces with advanced Flutter techniques.",
+          "imageUrl": "https://i.ytimg.com/vi/RB6EYx-_1y8/maxresdefault.jpg",
+          "instructor": "Jane Smith",
+          "level": "Intermediate",
+          "duration": "6 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Create custom animations and transitions.",
+              "Work with slivers to create complex scrolling effects.",
+              "Build responsive layouts for different screen sizes."
+          ],
+          "lessons": [
+              {
+                  "id": "201",
+                  "title": "Custom Painting and Animations",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "202",
+                  "title": "Working with Slivers",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "203",
+                  "title": "Responsive Design",
+                  "duration": "30:00"
+              }
+          ]
+      },
+      {
+          "id": "3",
+          "name": "Course 3: State Management in Flutter",
+          "description": "Learn various state management techniques in Flutter, including Provider, BLoC, and Riverpod.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:3200/format:webp/1*rXFefCEa1qbzIq7sefbZDA.jpeg",
+          "instructor": "Peter Jones",
+          "level": "Intermediate",
+          "duration": "5 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Understand the importance of state management.",
+              "Implement different state management solutions.",
+              "Choose the right state management approach for your app."
+          ],
+          "lessons": [
+              {
+                  "id": "301",
+                  "title": "Introduction to State Management",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "302",
+                  "title": "Using the Provider Package",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "303",
+                  "title": "Implementing the BLoC Pattern",
+                  "duration": "60:00"
+              }
+          ]
+      },
+      {
+          "id": "4",
+          "name": "Course 4: Firebase for Flutter",
+          "description": "Integrate Firebase services into your Flutter apps, including authentication, database, and storage.",
+          "imageUrl": "https://miro.medium.com/1*HONrAjjBvRlVz7sW-MUMwQ.jpeg",
+          "instructor": "Mary Johnson",
+          "level": "Beginner",
+          "duration": "4 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Set up Firebase in your Flutter project.",
+              "Authenticate users with Firebase Authentication.",
+              "Store and retrieve data from Cloud Firestore."
+          ],
+          "lessons": [
+              {
+                  "id": "401",
+                  "title": "Setting up Firebase",
+                  "duration": "15:00"
+              },
+              {
+                  "id": "402",
+                  "title": "Firebase Authentication",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "403",
+                  "title": "Cloud Firestore",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "5",
+          "name": "Course 5: Testing Flutter Apps",
+          "description": "A complete guide to testing your Flutter applications, including unit, widget, and integration tests.",
+          "imageUrl": "https://www.sumerge.com/wp-content/uploads/2021/10/Flutter-Cover-01-825x340.jpg",
+          "instructor": "David Williams",
+          "level": "Intermediate",
+          "duration": "5 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Write unit tests for your business logic.",
+              "Write widget tests for your UI components.",
+              "Write integration tests for your entire app."
+          ],
+          "lessons": [
+              {
+                  "id": "501",
+                  "title": "Introduction to Testing",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "502",
+                  "title": "Unit Testing",
+                  "duration": "35:00"
+              },
+              {
+                  "id": "503",
+                  "title": "Widget Testing",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "6",
+          "name": "Course 6: Dart Programming for Beginners",
+          "description": "Learn the fundamentals of the Dart programming language, the language behind Flutter.",
+          "imageUrl": "https://theeasymaster.com/wp-content/uploads/2025/04/dart-1.jpeg",
+          "instructor": "John Doe",
+          "level": "Beginner",
+          "duration": "4 weeks",
+          "rating": 4.4,
+          "whatYouWillLearn": [
+              "Understand the basics of the Dart language.",
+              "Write clean and efficient Dart code.",
+              "Apply your Dart knowledge to build Flutter apps."
+          ],
+          "lessons": [
+              {
+                  "id": "601",
+                  "title": "Variables and Data Types",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "602",
+                  "title": "Control Flow and Functions",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "603",
+                  "title": "Object-Oriented Programming in Dart",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "7",
+          "name": "Course 7: Advanced Dart Concepts",
+          "description": "Dive deep into advanced Dart concepts like streams, futures, and isolates.",
+          "imageUrl": "https://englishdart.fss.or.kr/images/concept_img1.png",
+          "instructor": "Jane Smith",
+          "level": "Advanced",
+          "duration": "6 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Master asynchronous programming in Dart.",
+              "Work with streams to handle sequences of events.",
+              "Use isolates to perform concurrent programming."
+          ],
+          "lessons": [
+              {
+                  "id": "701",
+                  "title": "Asynchronous Programming with Futures",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "702",
+                  "title": "Working with Streams",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "703",
+                  "title": "Concurrency with Isolates",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "8",
+          "name": "Course 8: Building a Backend with Dart and Shelf",
+          "description": "Learn how to build a backend for your Flutter apps using the Dart language and the Shelf framework.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*cDjyWVC-HsDeOcu1b8eAqQ.png",
+          "instructor": "Peter Jones",
+          "level": "Intermediate",
+          "duration": "5 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Build a RESTful API with Dart and Shelf.",
+              "Connect your backend to a database.",
+              "Deploy your Dart backend to the cloud."
+          ],
+          "lessons": [
+              {
+                  "id": "801",
+                  "title": "Introduction to Backend Development",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "802",
+                  "title": "Creating a REST API with Shelf",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "803",
+                  "title": "Connecting to a Database",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "9",
+          "name": "Course 9: Machine Learning with Flutter",
+          "description": "Integrate machine learning models into your Flutter apps using TensorFlow Lite.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:4800/format:webp/1*oWaSsbpBk89Aepk_9vTG_Q.jpeg",
+          "instructor": "Mary Johnson",
+          "level": "Advanced",
+          "duration": "8 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Understand the basics of machine learning.",
+              "Use TensorFlow Lite to run ML models in your Flutter app.",
+              "Build a real-world ML-powered Flutter app."
+          ],
+          "lessons": [
+              {
+                  "id": "901",
+                  "title": "Introduction to Machine Learning",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "902",
+                  "title": "Using TensorFlow Lite in Flutter",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "903",
+                  "title": "Building a Custom Image Classification App",
+                  "duration": "60:00"
+              }
+          ]
+      },
+      {
+          "id": "10",
+          "name": "Course 10: Augmented Reality with Flutter",
+          "description": "Create immersive augmented reality experiences in your Flutter apps.",
+          "imageUrl": "https://www.monarch-innovation.com/wp-content/uploads/2023/07/Flutter-and-Augmented-Reality-Create-AR-Experiences-in-Your-App-1400x700.jpg",
+          "instructor": "David Williams",
+          "level": "Advanced",
+          "duration": "7 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Understand the fundamentals of augmented reality.",
+              "Use ARKit and ARCore to create AR experiences.",
+              "Build a practical AR application with Flutter."
+          ],
+          "lessons": [
+              {
+                  "id": "1001",
+                  "title": "Introduction to Augmented Reality",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "1002",
+                  "title": "Using ARKit and ARCore with Flutter",
+                  "duration": "55:00"
+              },
+              {
+                  "id": "1003",
+                  "title": "Building a Simple AR App",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "11",
+          "name": "Course 11: Game Development with Flutter and Flame",
+          "description": "Learn how to build 2D games with Flutter and the Flame game engine.",
+          "imageUrl": "https://www.desarrollolibre.net/images/example/flutter/flutter-flame-desarrollo-de-juegos-en-2d.png",
+          "instructor": "John Doe",
+          "level": "Beginner",
+          "duration": "6 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Learn the basics of game development.",
+              "Create a 2D game from scratch using Flame.",
+              "Publish your game to the app stores."
+          ],
+          "lessons": [
+              {
+                  "id": "1101",
+                  "title": "Introduction to Game Development",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "1102",
+                  "title": "Getting Started with Flame",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "1103",
+                  "title": "Building a Simple Platformer Game",
+                  "duration": "60:00"
+              }
+          ]
+      },
+      {
+          "id": "12",
+          "name": "Course 12: Publishing your Flutter App",
+          "description": "A step-by-step guide to publishing your Flutter app to the Apple App Store and Google Play Store.",
+          "imageUrl": "https://i0.wp.com/flutterexperts.com/wp-content/uploads/2024/06/1_pBx4pvtFCHzOaAh1XCIXjA.png",
+          "instructor": "Jane Smith",
+          "level": "Beginner",
+          "duration": "3 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Prepare your app for release.",
+              "Publish your app to the Google Play Store.",
+              "Publish your app to the Apple App Store."
+          ],
+          "lessons": [
+              {
+                  "id": "1201",
+                  "title": "Preparing for Release",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "1202",
+                  "title": "Publishing to the Google Play Store",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "1203",
+                  "title": "Publishing to the Apple App Store",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "13",
+          "name": "Course 13: CI/CD for Flutter Apps",
+          "description": "Set up a continuous integration and continuous delivery pipeline for your Flutter apps using GitHub Actions.",
+          "imageUrl": "https://miro.medium.com/1*XHEQMxqz1pIU1aX5H6T15w.png",
+          "instructor": "Peter Jones",
+          "level": "Intermediate",
+          "duration": "4 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Automate your build, test, and release process.",
+              "Set up a CI/CD pipeline with GitHub Actions.",
+              "Improve the quality and reliability of your app."
+          ],
+          "lessons": [
+              {
+                  "id": "1301",
+                  "title": "Introduction to CI/CD",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "1302",
+                  "title": "Setting up GitHub Actions",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "1303",
+                  "title": "Automating your Build and Release Process",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "14",
+          "name": "Course 14: Flutter for Web",
+          "description": "Learn how to build and deploy web applications with Flutter.",
+          "imageUrl": "https://www.encodedots.com/blog/wp-content/uploads/2024/06/Flutter-for-Web-Development.jpg",
+          "instructor": "Mary Johnson",
+          "level": "Intermediate",
+          "duration": "5 weeks",
+          "rating": 4.5,
+          "whatYouWillLearn": [
+              "Build responsive web apps with Flutter.",
+              "Deploy your Flutter web app to a hosting service.",
+              "Understand the differences between Flutter for mobile and web."
+          ],
+          "lessons": [
+              {
+                  "id": "1401",
+                  "title": "Introduction to Flutter for Web",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "1402",
+                  "title": "Building a Responsive Web App",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "1403",
+                  "title": "Deploying your Web App",
+                  "duration": "35:00"
+              }
+          ]
+      },
+      {
+          "id": "15",
+          "name": "Course 15: Flutter for Desktop",
+          "description": "Learn how to build and deploy desktop applications for Windows, macOS, and Linux with Flutter.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1200/1*O2i3ZXeAVE7W3ey4yacgWA.png",
+          "instructor": "David Williams",
+          "level": "Intermediate",
+          "duration": "6 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Build desktop apps for multiple platforms from a single codebase.",
+              "Package and distribute your desktop app.",
+              "Access native desktop features from your Flutter app."
+          ],
+          "lessons": [
+              {
+                  "id": "1501",
+                  "title": "Introduction to Flutter for Desktop",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "1502",
+                  "title": "Building a Desktop App",
+                  "duration": "55:00"
+              },
+              {
+                  "id": "1503",
+                  "title": "Packaging and Distributing your Desktop App",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "16",
+          "name": "Course 16: The Complete Guide to React Native",
+          "description": "Build native mobile apps for iOS and Android using React Native.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/1*O867aLPdhwUyX-RKBSiNiQ.jpeg",
+          "instructor": "John Doe",
+          "level": "Beginner",
+          "duration": "8 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Build native mobile apps with JavaScript and React.",
+              "Understand the React Native ecosystem.",
+              "Publish your React Native app to the app stores."
+          ],
+          "lessons": [
+              {
+                  "id": "1601",
+                  "title": "Introduction to React Native",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "1602",
+                  "title": "Building your First React Native App",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "1603",
+                  "title": "Styling and Layouts",
+                  "duration": "35:00"
+              }
+          ]
+      },
+      {
+          "id": "17",
+          "name": "Course 17: Advanced React Native Concepts",
+          "description": "Master advanced concepts in React Native, including animations, gestures, and native modules.",
+          "imageUrl": "https://images.tokopedia.net/img/cache/700/VqbcmM/2020/9/30/735e3231-f59c-4c66-953a-5ca33ed92ef5.png",
+          "instructor": "Jane Smith",
+          "level": "Advanced",
+          "duration": "7 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Create complex animations and gestures.",
+              "Bridge native code to your React Native app.",
+              "Optimize the performance of your React Native app."
+          ],
+          "lessons": [
+              {
+                  "id": "1701",
+                  "title": "Animations in React Native",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "1702",
+                  "title": "Handling Gestures",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "1703",
+                  "title": "Working with Native Modules",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "18",
+          "name": "Course 18: State Management in React Native",
+          "description": "Learn various state management libraries for React Native, including Redux and MobX.",
+          "imageUrl": "https://cdn.educba.com/academy/wp-content/uploads/2021/02/React-State-Management.jpg",
+          "instructor": "Peter Jones",
+          "level": "Intermediate",
+          "duration": "5 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Understand the challenges of state management in large apps.",
+              "Implement Redux and MobX in your React Native app.",
+              "Choose the right state management library for your project."
+          ],
+          "lessons": [
+              {
+                  "id": "1801",
+                  "title": "Introduction to State Management",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "1802",
+                  "title": "Using Redux with React Native",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "1803",
+                  "title": "Using MobX with React Native",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "19",
+          "name": "Course 19: Building a Backend with Node.js and Express",
+          "description": "Create a RESTful API for your mobile apps using Node.js and Express.",
+          "imageUrl": "https://mmcgbl.com/wp-content/uploads/2022/05/Nodejs-1024x722.png",
+          "instructor": "Mary Johnson",
+          "level": "Intermediate",
+          "duration": "6 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Build a secure and scalable backend API.",
+              "Connect your API to a database.",
+              "Deploy your backend to a cloud platform."
+          ],
+          "lessons": [
+              {
+                  "id": "1901",
+                  "title": "Introduction to Node.js",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "1902",
+                  "title": "Building a REST API with Express",
+                  "duration": "55:00"
+              },
+              {
+                  "id": "1903",
+                  "title": "Connecting to a MongoDB Database",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "20",
+          "name": "Course 20: The Complete Guide to Swift Programming",
+          "description": "Learn the Swift programming language from scratch and build iOS apps.",
+          "imageUrl": "https://image.slidesharecdn.com/swiftthecompleteguideforbeginnersintermediateandadvancedstrategy-220509073526-5b9a38c2/95/Swift-The-Complete-Guide-for-Beginners-Intermediate-and-Advanced-Strategy-pptx-2-638.jpg",
+          "instructor": "David Williams",
+          "level": "Beginner",
+          "duration": "8 weeks",
+          "rating": 4.5,
+          "whatYouWillLearn": [
+              "Master the fundamentals of the Swift language.",
+              "Build a complete iOS app from scratch.",
+              "Publish your app to the Apple App Store."
+          ],
+          "lessons": [
+              {
+                  "id": "2001",
+                  "title": "Introduction to Swift",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "2002",
+                  "title": "Control Flow and Functions",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "2003",
+                  "title": "Object-Oriented Programming in Swift",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "21",
+          "name": "Course 21: iOS App Development with SwiftUI",
+          "description": "Build beautiful and declarative user interfaces for your iOS apps with SwiftUI.",
+          "imageUrl": "https://softprodigy.com/wp-content/uploads/2025/01/The-Role-of-SwiftUI-in-Modern-iOS-App-Development-All-You-Need-to-Know.jpg",
+          "instructor": "John Doe",
+          "level": "Beginner",
+          "duration": "7 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Build modern iOS apps with SwiftUI.",
+              "Understand the declarative UI paradigm.",
+              "Create complex layouts and animations."
+          ],
+          "lessons": [
+              {
+                  "id": "2101",
+                  "title": "Introduction to SwiftUI",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "2102",
+                  "title": "Building Layouts with SwiftUI",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "2103",
+                  "title": "State and Data Flow",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "22",
+          "name": "Course 22: The Complete Guide to Kotlin Programming",
+          "description": "Learn the Kotlin programming language, the official language for Android development.",
+          "imageUrl": "https://cdn.whizpool.com/2023/11/WHAT-IS-KOTLIN--THE-NEW-PROGRAMMING-LANGUAGE-WORTH-LEARNING-ABOUT.jpg",
+          "instructor": "Jane Smith",
+          "level": "Beginner",
+          "duration": "8 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Master the fundamentals of the Kotlin language.",
+              "Build a complete Android app from scratch.",
+              "Publish your app to the Google Play Store."
+          ],
+          "lessons": [
+              {
+                  "id": "2201",
+                  "title": "Introduction to Kotlin",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "2202",
+                  "title": "Control Flow and Functions",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "2203",
+                  "title": "Object-Oriented Programming in Kotlin",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "23",
+          "name": "Course 23: Android App Development with Jetpack Compose",
+          "description": "Build modern and native Android apps with Jetpack Compose, Android's new declarative UI toolkit.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*gd0a4LhGG62B7rDJthbkPw.png",
+          "instructor": "Peter Jones",
+          "level": "Beginner",
+          "duration": "7 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Build modern Android apps with Jetpack Compose.",
+              "Understand the declarative UI paradigm.",
+              "Create beautiful and responsive layouts."
+          ],
+          "lessons": [
+              {
+                  "id": "2301",
+                  "title": "Introduction to Jetpack Compose",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "2302",
+                  "title": "Building Layouts with Jetpack Compose",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "2303",
+                  "title": "State and Recomposition",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "24",
+          "name": "Course 24: Data Science with Python",
+          "description": "Learn the fundamentals of data science and machine learning with Python.",
+          "imageUrl": "https://www.aiche.org/sites/default/files/images/courses/lead_custom_image_ela271.jpg",
+          "instructor": "Mary Johnson",
+          "level": "Intermediate",
+          "duration": "10 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Analyze and visualize data with Python.",
+              "Build machine learning models with scikit-learn.",
+              "Apply your data science skills to real-world problems."
+          ],
+          "lessons": [
+              {
+                  "id": "2401",
+                  "title": "Introduction to Data Science",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "2402",
+                  "title": "Data Analysis with Pandas",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "2403",
+                  "title": "Machine Learning with Scikit-learn",
+                  "duration": "60:00"
+              }
+          ]
+      },
+      {
+          "id": "25",
+          "name": "Course 25: Deep Learning with TensorFlow",
+          "description": "A comprehensive guide to deep learning with TensorFlow, Google's open-source machine learning framework.",
+          "imageUrl": "https://cdn.educba.com/academy/wp-content/uploads/2020/02/Deep-Learning-with-TensorFlow.jpg",
+          "instructor": "David Williams",
+          "level": "Advanced",
+          "duration": "12 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Build and train deep neural networks.",
+              "Use TensorFlow to solve complex problems.",
+              "Understand the latest deep learning architectures."
+          ],
+          "lessons": [
+              {
+                  "id": "2501",
+                  "title": "Introduction to Deep Learning",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "2502",
+                  "title": "Building Neural Networks with TensorFlow",
+                  "duration": "55:00"
+              },
+              {
+                  "id": "2503",
+                  "title": "Convolutional Neural Networks",
+                  "duration": "60:00"
+              }
+          ]
+      },
+      {
+          "id": "26",
+          "name": "Course 26: Natural Language Processing with Python",
+          "description": "Learn how to process and analyze text data with Python and popular NLP libraries.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/1*nQpiUTaJlpdpCDt9fosVzg.png",
+          "instructor": "John Doe",
+          "level": "Advanced",
+          "duration": "10 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Perform sentiment analysis on text data.",
+              "Build a chatbot from scratch.",
+              "Use NLP to solve real-world problems."
+          ],
+          "lessons": [
+              {
+                  "id": "2601",
+                  "title": "Introduction to NLP",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "2602",
+                  "title": "Text Preprocessing and Vectorization",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "2603",
+                  "title": "Sentiment Analysis",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "27",
+          "name": "Course 27: Computer Vision with OpenCV and Python",
+          "description": "Learn the fundamentals of computer vision and image processing with OpenCV and Python.",
+          "imageUrl": "https://m.media-amazon.com/images/I/713cA6RNjoL._UF1000,1000_QL80_.jpg",
+          "instructor": "Jane Smith",
+          "level": "Advanced",
+          "duration": "10 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Perform image processing and manipulation.",
+              "Detect objects and faces in images and videos.",
+              "Build computer vision applications with OpenCV."
+          ],
+          "lessons": [
+              {
+                  "id": "2701",
+                  "title": "Introduction to Computer Vision",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "2702",
+                  "title": "Image Processing with OpenCV",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "2703",
+                  "title": "Object Detection",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "28",
+          "name": "Course 28: Web Development with HTML, CSS, and JavaScript",
+          "description": "The ultimate guide to modern web development, covering the fundamental technologies of the web.",
+          "imageUrl": "https://res.cloudinary.com/fridolin/image/upload/v1723707817/Kitech_Blog_Thumbnail_22_hr5xf2.png",
+          "instructor": "Peter Jones",
+          "level": "Beginner",
+          "duration": "12 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Build beautiful and responsive websites.",
+              "Master the fundamentals of HTML, CSS, and JavaScript.",
+              "Create interactive and dynamic web pages."
+          ],
+          "lessons": [
+              {
+                  "id": "2801",
+                  "title": "Introduction to HTML",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "2802",
+                  "title": "Styling with CSS",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "2803",
+                  "title": "JavaScript Fundamentals",
+                  "duration": "60:00"
+              }
+          ]
+      },
+      {
+          "id": "29",
+          "name": "Course 29: The Complete Guide to React.js",
+          "description": "Build modern and interactive user interfaces for the web with React.js.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1024/0*kRICN-8IwJgKy4cw.jpg",
+          "instructor": "Mary Johnson",
+          "level": "Intermediate",
+          "duration": "10 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Build complex and scalable web applications with React.",
+              "Master the React ecosystem, including Redux and React Router.",
+              "Write clean and maintainable React code."
+          ],
+          "lessons": [
+              {
+                  "id": "2901",
+                  "title": "Introduction to React",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "2902",
+                  "title": "Components, Props, and State",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "2903",
+                  "title": "Hooks in React",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "30",
+          "name": "Course 30: The Complete Guide to Angular",
+          "description": "Build powerful and scalable web applications with the Angular framework.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:1400/1*ULXDFpjJ984VLhfV8PrJWQ.png",
+          "instructor": "David Williams",
+          "level": "Intermediate",
+          "duration": "12 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Build enterprise-grade web applications with Angular.",
+              "Master the Angular framework and its core concepts.",
+              "Write clean and maintainable Angular code."
+          ],
+          "lessons": [
+              {
+                  "id": "3001",
+                  "title": "Introduction to Angular",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "3002",
+                  "title": "Components and Templates",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "3003",
+                  "title": "Services and Dependency Injection",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "31",
+          "name": "Course 31: The Complete Guide to Vue.js",
+          "description": "Build progressive and incrementally adoptable user interfaces with Vue.js.",
+          "imageUrl": "https://kavoneinstitute.com/wp-content/uploads/2024/07/Complete-Vue.JS-Masterclass.jpg",
+          "instructor": "John Doe",
+          "level": "Intermediate",
+          "duration": "8 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Build beautiful and performant web applications with Vue.js.",
+              "Master the Vue.js framework and its ecosystem.",
+              "Write clean and maintainable Vue.js code."
+          ],
+          "lessons": [
+              {
+                  "id": "3101",
+                  "title": "Introduction to Vue.js",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "3102",
+                  "title": "Components and Props",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "3103",
+                  "title": "State Management with Vuex",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "32",
+          "name": "Course 32: Building a Full-Stack Web App with the MERN Stack",
+          "description": "Learn how to build a complete web application from scratch using MongoDB, Express, React, and Node.js.",
+          "imageUrl": "https://cdn.educba.com/academy/wp-content/uploads/2023/08/MERN-Stack.jpg",
+          "instructor": "Jane Smith",
+          "level": "Advanced",
+          "duration": "14 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Build a full-stack web application from end to end.",
+              "Master the MERN stack and its components.",
+              "Deploy your application to the cloud."
+          ],
+          "lessons": [
+              {
+                  "id": "3201",
+                  "title": "Setting up the Project",
+                  "duration": "20:00"
+              },
+              {
+                  "id": "3202",
+                  "title": "Building the Backend API",
+                  "duration": "60:00"
+              },
+              {
+                  "id": "3203",
+                  "title": "Building the Frontend with React",
+                  "duration": "75:00"
+              }
+          ]
+      },
+      {
+          "id": "33",
+          "name": "Course 33: The Complete Guide to Python Programming",
+          "description": "Learn the Python programming language from scratch, from the basics to advanced concepts.",
+          "imageUrl": "https://miro.medium.com/v2/resize:fit:900/1*mlng_FCC6ZGp0jMdVKD3EQ.jpeg",
+          "instructor": "Peter Jones",
+          "level": "Beginner",
+          "duration": "10 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Master the fundamentals of the Python language.",
+              "Write clean and efficient Python code.",
+              "Apply your Python skills to various domains."
+          ],
+          "lessons": [
+              {
+                  "id": "3301",
+                  "title": "Introduction to Python",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "3302",
+                  "title": "Data Structures in Python",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "3303",
+                  "title": "Object-Oriented Programming in Python",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "34",
+          "name": "Course 34: The Complete Guide to Java Programming",
+          "description": "Learn the Java programming language, one of the most popular and widely used languages in the world.",
+          "imageUrl": "https://img-c.udemycdn.com/course/240x135/6580163_ca9c_2.jpg",
+          "instructor": "Mary Johnson",
+          "level": "Beginner",
+          "duration": "12 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Master the fundamentals of the Java language.",
+              "Write robust and scalable Java applications.",
+              "Prepare for Java certification exams."
+          ],
+          "lessons": [
+              {
+                  "id": "3401",
+                  "title": "Introduction to Java",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "3402",
+                  "title": "Object-Oriented Programming in Java",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "3403",
+                  "title": "The Java Collections Framework",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "35",
+          "name": "Course 35: The Complete Guide to C++ Programming",
+          "description": "Learn the C++ programming language, a powerful and high-performance language used in various domains.",
+          "imageUrl": "https://miro.medium.com/1*JFwpUPhN_xz3xxbLbHhjzw.jpeg",
+          "instructor": "David Williams",
+          "level": "Intermediate",
+          "duration": "14 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Master the C++ language and its features.",
+              "Write high-performance and memory-efficient code.",
+              "Prepare for technical interviews."
+          ],
+          "lessons": [
+              {
+                  "id": "3501",
+                  "title": "Introduction to C++",
+                  "duration": "35:00"
+              },
+              {
+                  "id": "3502",
+                  "title": "Pointers and Memory Management",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "3503",
+                  "title": "The C++ Standard Template Library (STL)",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "36",
+          "name": "Course 36: The Complete Guide to C# Programming",
+          "description": "Learn the C# programming language and build applications for the .NET platform.",
+          "imageUrl": "https://i5.walmartimages.com/seo/C-The-Ultimate-Beginner-s-Guide-to-Learn-C-Programming-Step-by-Step-Paperback-9781647710019_55f52910-89fa-4e2c-99b7-1628937fe51d_1.2f14d9ef96e52159e2d216dd323238a0.jpeg",
+          "instructor": "John Doe",
+          "level": "Intermediate",
+          "duration": "10 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Master the C# language and the .NET framework.",
+              "Build web and desktop applications with C#.",
+              "Prepare for Microsoft certification exams."
+          ],
+          "lessons": [
+              {
+                  "id": "3601",
+                  "title": "Introduction to C#",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "3602",
+                  "title": "Object-Oriented Programming in C#",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "3603",
+                  "title": "Building a .NET Application",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "37",
+          "name": "Course 37: The Complete Guide to Go Programming",
+          "description": "Learn the Go programming language, a fast and concurrent language developed by Google.",
+          "imageUrl": "https://inspius.com/wp-content/uploads/2024/03/Article-banner-Mobile-Developer-1.png",
+          "instructor": "Jane Smith",
+          "level": "Intermediate",
+          "duration": "8 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Master the Go language and its concurrency features.",
+              "Build high-performance and scalable network services.",
+              "Write clean and idiomatic Go code."
+          ],
+          "lessons": [
+              {
+                  "id": "3701",
+                  "title": "Introduction to Go",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "3702",
+                  "title": "Concurrency in Go",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "3703",
+                  "title": "Building a Web Service with Go",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "38",
+          "name": "Course 38: The Complete Guide to Rust Programming",
+          "description": "Learn the Rust programming language, a language focused on safety, speed, and concurrency.",
+          "imageUrl": "https://www.weetechsolution.com/wp-content/uploads/2023/08/Rust-Programming-Language-Introduction-Documentation.jpg",
+          "instructor": "Peter Jones",
+          "level": "Advanced",
+          "duration": "12 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Master the Rust language and its ownership system.",
+              "Write safe and concurrent code without a garbage collector.",
+              "Build high-performance systems and applications."
+          ],
+          "lessons": [
+              {
+                  "id": "3801",
+                  "title": "Introduction to Rust",
+                  "duration": "35:00"
+              },
+              {
+                  "id": "3802",
+                  "title": "Ownership and Borrowing",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "3803",
+                  "title": "Concurrency in Rust",
+                  "duration": "55:00"
+              }
+          ]
+      },
+      {
+          "id": "39",
+          "name": "Course 39: The Complete Guide to TypeScript",
+          "description": "Learn TypeScript, a typed superset of JavaScript that compiles to plain JavaScript.",
+          "imageUrl": "https://www.codemystery.com/wp-content/uploads/2020/05/typescript-tutorials.png",
+          "instructor": "Mary Johnson",
+          "level": "Intermediate",
+          "duration": "6 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Add static types to your JavaScript code.",
+              "Catch errors at compile time instead of runtime.",
+              "Build large-scale and maintainable JavaScript applications."
+          ],
+          "lessons": [
+              {
+                  "id": "3901",
+                  "title": "Introduction to TypeScript",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "3902",
+                  "title": "Types and Interfaces",
+                  "duration": "40:00"
+              },
+              {
+                  "id": "3903",
+                  "title": "Using TypeScript with React",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "40",
+          "name": "Course 40: The Complete Guide to GraphQL",
+          "description": "Learn GraphQL, a query language for your API, and a server-side runtime for executing queries by using a type system you define for your data.",
+          "imageUrl": "https://habrastorage.org/webt/x3/za/hx/x3zahxlnt9x9jjlzewyixoyphck.png",
+          "instructor": "David Williams",
+          "level": "Intermediate",
+          "duration": "7 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Build flexible and efficient APIs with GraphQL.",
+              "Understand the GraphQL query language and schema.",
+              "Use GraphQL with your favorite frontend framework."
+          ],
+          "lessons": [
+              {
+                  "id": "4001",
+                  "title": "Introduction to GraphQL",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "4002",
+                  "title": "Building a GraphQL Server",
+                  "duration": "55:00"
+              },
+              {
+                  "id": "4003",
+                  "title": "Using GraphQL with React",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "41",
+          "name": "Course 41: The Complete Guide to Docker",
+          "description": "Learn how to use Docker to create, deploy, and run applications in containers.",
+          "imageUrl": "https://images.booksense.com/images/516/160/9798677160516.jpg",
+          "instructor": "John Doe",
+          "level": "Beginner",
+          "duration": "5 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Containerize your applications with Docker.",
+              "Create and manage Docker images and containers.",
+              "Use Docker Compose to run multi-container applications."
+          ],
+          "lessons": [
+              {
+                  "id": "4101",
+                  "title": "Introduction to Docker",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "4102",
+                  "title": "Creating Docker Images",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "4103",
+                  "title": "Docker Compose",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "42",
+          "name": "Course 42: The Complete Guide to Kubernetes",
+          "description": "Learn how to deploy, manage, and scale containerized applications with Kubernetes.",
+          "imageUrl": "https://komodor.com/wp-content/uploads/2022/01/Kubernetes_.png",
+          "instructor": "Jane Smith",
+          "level": "Advanced",
+          "duration": "10 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Deploy and manage containerized applications at scale.",
+              "Understand the architecture and concepts of Kubernetes.",
+              "Use Kubernetes to build resilient and scalable systems."
+          ],
+          "lessons": [
+              {
+                  "id": "4201",
+                  "title": "Introduction to Kubernetes",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "4202",
+                  "title": "Deploying Applications with Kubernetes",
+                  "duration": "55:00"
+              },
+              {
+                  "id": "4203",
+                  "title": "Scaling and Managing Applications",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "43",
+          "name": "Course 43: The Complete Guide to AWS",
+          "description": "Learn the fundamentals of Amazon Web Services (AWS) and its core services.",
+          "imageUrl": "https://cdn.prod.website-files.com/66d34883c2286b9bddab6a1e/66f42348bdc1f59802502306_AWS-A-Complete-Guide.png",
+          "instructor": "Peter Jones",
+          "level": "Beginner",
+          "duration": "12 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Understand the AWS cloud and its core services.",
+              "Launch and manage virtual servers with EC2.",
+              "Store and retrieve data with S3."
+          ],
+          "lessons": [
+              {
+                  "id": "4301",
+                  "title": "Introduction to AWS",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "4302",
+                  "title": "EC2 and S3",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "4303",
+                  "title": "IAM and VPC",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "44",
+          "name": "Course 44: The Complete Guide to Google Cloud Platform (GCP)",
+          "description": "Learn the fundamentals of Google Cloud Platform (GCP) and its core services.",
+          "imageUrl": "https://cdn.educba.com/academy/wp-content/uploads/2019/09/what-is-google-cloud-platform.jpg",
+          "instructor": "Mary Johnson",
+          "level": "Beginner",
+          "duration": "12 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Understand the GCP cloud and its core services.",
+              "Launch and manage virtual machines with Compute Engine.",
+              "Store and retrieve data with Cloud Storage."
+          ],
+          "lessons": [
+              {
+                  "id": "4401",
+                  "title": "Introduction to GCP",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "4402",
+                  "title": "Compute Engine and Cloud Storage",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "4403",
+                  "title": "IAM and VPC",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "45",
+          "name": "Course 45: The Complete Guide to Microsoft Azure",
+          "description": "Learn the fundamentals of Microsoft Azure and its core services.",
+          "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_azure.jpg",
+          "instructor": "David Williams",
+          "level": "Beginner",
+          "duration": "12 weeks",
+          "rating": 4.6,
+          "whatYouWillLearn": [
+              "Understand the Azure cloud and its core services.",
+              "Launch and manage virtual machines with Azure VMs.",
+              "Store and retrieve data with Azure Blob Storage."
+          ],
+          "lessons": [
+              {
+                  "id": "4501",
+                  "title": "Introduction to Azure",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "4502",
+                  "title": "Virtual Machines and Blob Storage",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "4503",
+                  "title": "Azure Active Directory and VNet",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "46",
+          "name": "Course 46: The Complete Guide to DevOps",
+          "description": "Learn the principles and practices of DevOps and how to implement them in your organization.",
+          "imageUrl": "https://www.shutterstock.com/image-photo/devops-concept-data-engineer-programmer-600nw-2346923703.jpg",
+          "instructor": "John Doe",
+          "level": "Intermediate",
+          "duration": "10 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Understand the DevOps culture and principles.",
+              "Implement a CI/CD pipeline.",
+              "Use infrastructure as code to manage your infrastructure."
+          ],
+          "lessons": [
+              {
+                  "id": "4601",
+                  "title": "Introduction to DevOps",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "4602",
+                  "title": "Continuous Integration and Continuous Delivery",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "4603",
+                  "title": "Infrastructure as Code",
+                  "duration": "45:00"
+              }
+          ]
+      },
+      {
+          "id": "47",
+          "name": "Course 47: The Complete Guide to Agile and Scrum",
+          "description": "Learn the principles and practices of Agile and Scrum and how to apply them to your projects.",
+          "imageUrl": "https://miro.medium.com/1*7zdANsLiE1BN9FRl3rf3kw.jpeg",
+          "instructor": "Jane Smith",
+          "level": "Beginner",
+          "duration": "6 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Understand the Agile mindset and principles.",
+              "Master the Scrum framework.",
+              "Run successful Scrum projects."
+          ],
+          "lessons": [
+              {
+                  "id": "4701",
+                  "title": "Introduction to Agile",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "4702",
+                  "title": "The Scrum Framework",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "4703",
+                  "title": "Running a Scrum Project",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "48",
+          "name": "Course 48: The Complete Guide to UI/UX Design",
+          "description": "Learn the fundamentals of UI/UX design and how to create beautiful and user-friendly digital products.",
+          "imageUrl": "https://img.freepik.com/free-vector/gradient-ui-ux-landing-page-template_23-2149060735.jpg",
+          "instructor": "Peter Jones",
+          "level": "Beginner",
+          "duration": "8 weeks",
+          "rating": 4.9,
+          "whatYouWillLearn": [
+              "Understand the principles of UI/UX design.",
+              "Conduct user research and create user personas.",
+              "Design wireframes and prototypes."
+          ],
+          "lessons": [
+              {
+                  "id": "4801",
+                  "title": "Introduction to UI/UX Design",
+                  "duration": "30:00"
+              },
+              {
+                  "id": "4802",
+                  "title": "User Research and Personas",
+                  "duration": "45:00"
+              },
+              {
+                  "id": "4803",
+                  "title": "Wireframing and Prototyping",
+                  "duration": "50:00"
+              }
+          ]
+      },
+      {
+          "id": "49",
+          "name": "Course 49: The Complete Guide to Figma",
+          "description": "Learn how to use Figma to design, prototype, and collaborate on UI/UX projects.",
+          "imageUrl": "https://cdn.prod.website-files.com/65c1ae21fb2191466dd6ce72/66027bfb34a7d58b729c069f_657aadb1358ec0cddd7516ce_The%2520Ultimate%2520Guide%2520to%2520Figma%25202024.jpeg",
+          "instructor": "Mary Johnson",
+          "level": "Beginner",
+          "duration": "6 weeks",
+          "rating": 4.8,
+          "whatYouWillLearn": [
+              "Master the Figma interface and tools.",
+              "Design and prototype a complete mobile app.",
+              "Collaborate with your team in Figma."
+          ],
+          "lessons": [
+              {
+                  "id": "4901",
+                  "title": "Introduction to Figma",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "4902",
+                  "title": "Designing with Figma",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "4903",
+                  "title": "Prototyping and Collaboration",
+                  "duration": "40:00"
+              }
+          ]
+      },
+      {
+          "id": "50",
+          "name": "Course 50: The Complete Guide to Adobe XD",
+          "description": "Learn how to use Adobe XD to design, prototype, and share user experiences.",
+          "imageUrl": "https://hagabiprodukto.com/wp-content/uploads/2023/06/adobe-xd.png",
+          "instructor": "David Williams",
+          "level": "Beginner",
+          "duration": "6 weeks",
+          "rating": 4.7,
+          "whatYouWillLearn": [
+              "Master the Adobe XD interface and tools.",
+              "Design and prototype a complete website.",
+              "Share your designs for feedback and collaboration."
+          ],
+          "lessons": [
+              {
+                  "id": "5001",
+                  "title": "Introduction to Adobe XD",
+                  "duration": "25:00"
+              },
+              {
+                  "id": "5002",
+                  "title": "Designing and Prototyping",
+                  "duration": "50:00"
+              },
+              {
+                  "id": "5003",
+                  "title": "Sharing and Collaboration",
+                  "duration": "40:00"
+              }
+          ]
+      }
   ]
 }
