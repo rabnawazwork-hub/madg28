@@ -104,7 +104,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                         MaterialPageRoute(
                                           builder: (context) =>
                                               ProgramDetailScreen(
-                                                  program: program),
+                                                  programId: program.id),
                                         ),
                                       );
                                     },

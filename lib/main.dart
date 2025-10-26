@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:madg28/notifiers/program_detail_notifier.dart';
+import 'package:madg28/notifiers/programs_notifier.dart';
 import 'package:madg28/screens/home/program_listing.dart';
 import 'package:madg28/screens/profile_and_settings/profile_and_settings_screen.dart'; // Updated import
 import 'screens/login/login_screen.dart';
@@ -13,8 +15,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   ThemeMode initialThemeMode = await ThemeNotifier.getThemeModeFromPrefs();
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => ThemeNotifier(initialThemeMode),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ThemeNotifier(initialThemeMode)),
+        ChangeNotifierProvider(create: (_) => ProgramsNotifier()),
+        ChangeNotifierProvider(create: (_) => ProgramDetailNotifier()),
+      ],
       child: const MyApp(),
     ),
   );
