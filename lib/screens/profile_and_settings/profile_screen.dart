@@ -9,6 +9,9 @@ import '../../main.dart';
 import '../login/login_screen.dart';
 import '../course/enrolled_courses_screen.dart';
 import '../search/search_screen.dart';
+import '../../l10n/app_localizations.dart';
+import 'certificates_screen.dart';
+import 'progress_overview_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -26,10 +29,19 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<UserProvider>(context);
     final theme = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
       appBar: AppBar(
-        leading: const BackButton(),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const MainScreen()),
+            );
+          },
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -50,7 +62,7 @@ class ProfileScreen extends StatelessWidget {
               radius: 50,
               backgroundColor: theme.tertiary,
               backgroundImage: _getImageProvider(user),
-              child: user.imagePath == null
+              child: user.imagePath == null || user.imagePath!.trim().isEmpty
                   ? Icon(Icons.person, size: 50, color: theme.onPrimary)
                   : null,
             ),
@@ -71,7 +83,7 @@ class ProfileScreen extends StatelessWidget {
                 );
               },
               icon: const Icon(Icons.edit),
-              label: const Text('Edit Profile'),
+              label: Text(localizations.editProfile),
               style: ElevatedButton.styleFrom(
                 backgroundColor: theme.primary,
                 foregroundColor: Colors.white,
@@ -79,13 +91,19 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            _buildListTile(Icons.book, 'My Courses', () {
+            _buildListTile(Icons.book, localizations.myCourses, () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const EnrolledCoursesScreen()));
             }),
-            _buildListTile(Icons.workspace_premium, 'Certificates', () {}),
-            _buildListTile(Icons.bookmark, 'Saved Courses', () {}),
-            _buildListTile(Icons.bar_chart, 'Progress Overview', () {}),
+            _buildListTile(Icons.workspace_premium, localizations.certificates, () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const CertificatesScreen()));
+            }),
+            _buildListTile(Icons.bookmark, localizations.savedCourses, () {}),
+            _buildListTile(Icons.bar_chart, localizations.progressOverview, () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (_) => const ProgressOverviewScreen()));
+            }),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -97,7 +115,7 @@ class ProfileScreen extends StatelessWidget {
                 foregroundColor: Colors.white,
                 minimumSize: const Size.fromHeight(50),
               ),
-              child: const Text("Browse More Course"),
+              child: Text(localizations.browseMoreCourses),
             ),
             const SizedBox(height: 10),
             OutlinedButton(
@@ -111,8 +129,8 @@ class ProfileScreen extends StatelessWidget {
               style: OutlinedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50),
               ),
-              child: const Text(
-                "Log Out",
+              child: Text(
+                localizations.logOut,
                 style: TextStyle(color: Colors.red),
               ),
             ),

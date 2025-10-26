@@ -13,6 +13,7 @@ import 'package:madg28/theme_notifier.dart';
 import 'package:madg28/providers/locale_provider.dart';
 import 'package:madg28/providers/user_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,14 +45,15 @@ class MyApp extends StatelessWidget {
           supportedLocales: const [
             Locale('en'), // English
             Locale('es'), // Spanish
+            Locale('fr'), // French
+            Locale('de'), // German
             // Add more as needed
           ],
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-            // If using generated localizations:
-            // AppLocalizations.delegate,
+            AppLocalizations.delegate,
           ],
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(

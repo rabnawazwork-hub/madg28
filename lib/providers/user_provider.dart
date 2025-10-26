@@ -26,7 +26,7 @@ class UserProvider extends ChangeNotifier {
   void clearUser() {
     _name = 'Username';
     _email = 'user@gmail.com';
-    _imagePath = null;
+    _imagePath = '';
     notifyListeners();
   }
 }

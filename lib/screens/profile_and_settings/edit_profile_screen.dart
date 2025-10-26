@@ -1,9 +1,15 @@
 import 'dart:io';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:provider/Provider.dart';
 import '../../providers/user_provider.dart';
 import 'package:image_picker/image_picker.dart';
+import '../../l10n/app_localizations.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import '../../main.dart';
+import '../search/search_screen.dart';
+import '../course/enrolled_courses_screen.dart';
+import 'profile_screen.dart';
 
 class EditProfileScreen extends StatefulWidget {
   const EditProfileScreen({super.key});
@@ -52,11 +58,12 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   }
 
   void _saveProfile() {
+    final localizations = AppLocalizations.of(context)!;
     if (_formKey.currentState?.validate() ?? false) {
       if (_passwordController.text.isNotEmpty &&
           _passwordController.text != _confirmPasswordController.text) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Passwords do not match')),
+          SnackBar(content: Text(localizations.passwordsDoNotMatch)),
         );
         return;
       }
@@ -73,9 +80,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).colorScheme;
+    final localizations = AppLocalizations.of(context)!;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Edit Profile')),
+      appBar: AppBar(title: Text(localizations.editProfile)),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
         child: Form(
@@ -90,7 +98,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   backgroundImage: _profileImage != null
                       ? (kIsWeb
                           ? NetworkImage(_profileImage!.path)
-                          : FileImage(File(_profileImage!.path)) as ImageProvider)
+                          : FileImage(File(_profileImage!.path)))
                       : null,
                   child: _profileImage == null
                       ? Icon(Icons.person, size: 50, color: theme.onPrimary)
@@ -100,37 +108,37 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
               const SizedBox(height: 12),
               TextFormField(
                 controller: _nameController,
-                decoration: const InputDecoration(labelText: 'Full Name'),
+                decoration: InputDecoration(labelText: localizations.fullName),
                 validator: (value) =>
                     value == null || value.trim().isEmpty
-                        ? 'Please enter your name'
+                        ? localizations.pleaseEnterName
                         : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _emailController,
-                decoration: const InputDecoration(labelText: 'Email'),
+                decoration: InputDecoration(labelText: localizations.email),
                 validator: (value) =>
                     value == null || value.trim().isEmpty || !value.contains('@')
-                        ? 'Please enter a valid email'
+                        ? localizations.pleaseEnterValidEmail
                         : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _passwordController,
                 decoration:
-                    const InputDecoration(labelText: 'Password (leave blank to keep)'),
+                    InputDecoration(labelText: localizations.leaveBlankToKeep),
                 obscureText: true,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _confirmPasswordController,
-                decoration: const InputDecoration(labelText: 'Confirm Password'),
+                decoration: InputDecoration(labelText: localizations.confirmPassword),
                 obscureText: true,
                 validator: (value) {
                   if (_passwordController.text.isNotEmpty &&
                       (value == null || value != _passwordController.text)) {
-                    return 'Passwords do not match';
+                    return localizations.passwordsDoNotMatch;
                   }
                   return null;
                 },
@@ -143,11 +151,56 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   foregroundColor: Colors.white,
                   minimumSize: const Size.fromHeight(50),
                 ),
-                child: const Text('Save Changes'),
+                child: Text(localizations.saveChanges),
               ),
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: GNav(
+        gap: 8,
+        tabs: const [
+          GButton(
+            icon: Icons.home,
+            text: 'Home',
+          ),
+          GButton(
+            icon: Icons.search,
+            text: 'Search',
+          ),
+          GButton(
+            icon: Icons.book,
+            text: 'Enrolled',
+          ),
+          GButton(
+            icon: Icons.person,
+            text: 'Profile',
+          ),
+        ],
+        selectedIndex: 3, // Profile tab selected
+        onTabChange: (index) {
+          if (index == 0) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const MainScreen()),
+            );
+          } else if (index == 1) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const SearchScreen()),
+            );
+          } else if (index == 2) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const EnrolledCoursesScreen()),
+            );
+          } else if (index == 3) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const ProfileScreen()),
+            );
+          }
+        },
       ),
     );
   }
