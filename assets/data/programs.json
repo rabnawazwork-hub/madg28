@@ -18,12 +18,34 @@
               {
                   "id": "101",
                   "title": "Setting up your Development Environment",
-                  "duration": "20:00"
+                  "duration": "20:00",
+                  "feedback": [
+                      {
+                          "userId": "user1",
+                          "rating": 5.0,
+                          "comment": "Great introduction! Very clear and concise.",
+                          "date": "2023-01-15T10:00:00Z"
+                      },
+                      {
+                          "userId": "user2",
+                          "rating": 4.0,
+                          "comment": "Good content, but could be a bit more detailed.",
+                          "date": "2023-01-16T11:30:00Z"
+                      }
+                  ]
               },
               {
                   "id": "102",
                   "title": "Understanding Widgets",
-                  "duration": "45:00"
+                  "duration": "45:00",
+                  "feedback": [
+                      {
+                          "userId": "user3",
+                          "rating": 5.0,
+                          "comment": "Excellent explanation of widgets. Very helpful!",
+                          "date": "2023-01-17T14:00:00Z"
+                      }
+                  ]
               },
               {
                   "id": "103",
@@ -50,7 +72,15 @@
               {
                   "id": "201",
                   "title": "Custom Painting and Animations",
-                  "duration": "50:00"
+                  "duration": "50:00",
+                  "feedback": [
+                      {
+                          "userId": "user4",
+                          "rating": 4.5,
+                          "comment": "Challenging but rewarding. The examples were great.",
+                          "date": "2023-02-01T09:00:00Z"
+                      }
+                  ]
               },
               {
                   "id": "202",

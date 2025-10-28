@@ -48,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Form(
                     key: _formKey,
+                    autovalidateMode: AutovalidateMode.always,
                     child: Column(
                       children: [
                         Text('Login', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: theme.primary)),

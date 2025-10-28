@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:madg28/theme_notifier.dart';
 import 'package:madg28/screens/login/login_screen.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class ProfileAndSettingsScreen extends StatefulWidget {
   const ProfileAndSettingsScreen({super.key});
@@ -13,6 +15,18 @@ class ProfileAndSettingsScreen extends StatefulWidget {
 
 class _ProfileAndSettingsScreenState extends State<ProfileAndSettingsScreen> {
   bool _notificationsEnabled = true;
+  File? _profileImage;
+
+  Future<void> _pickImage() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedFile != null) {
+      setState(() {
+        _profileImage = File(pickedFile.path);
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +42,44 @@ class _ProfileAndSettingsScreenState extends State<ProfileAndSettingsScreen> {
             floating: true,
             flexibleSpace: FlexibleSpaceBar(
               title: const Text('John Doe', style: TextStyle(fontSize: 20.0)),
-              background: Image.asset(
-                'assets/images/advance_flutter.png', // Background image
-                fit: BoxFit.cover,
-                color: Colors.black.withOpacity(0.5),
-                colorBlendMode: BlendMode.darken,
+              background: Stack(
+                fit: StackFit.expand,
+                children: [
+                  Image.asset(
+                    'assets/images/advance_flutter.png', // Background image
+                    fit: BoxFit.cover,
+                    color: Colors.black.withAlpha((0.5 * 255).round()),
+                    colorBlendMode: BlendMode.darken,
+                  ),
+                  Center(
+                    child: Stack(
+                      children: [
+                        CircleAvatar(
+                          radius: 60,
+                          backgroundColor: Colors.white,
+                          backgroundImage: _profileImage != null
+                              ? FileImage(_profileImage!)
+                              : const AssetImage('assets/images/logo.png') as ImageProvider,
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: GestureDetector(
+                            onTap: _pickImage,
+                            child: CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Theme.of(context).colorScheme.secondary,
+                              child: Icon(
+                                Icons.camera_alt,
+                                color: Theme.of(context).colorScheme.onSecondary,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

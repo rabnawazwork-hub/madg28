@@ -66,11 +66,13 @@ class Lesson {
   final String id;
   final String title;
   final String duration;
+  final List<CourseFeedback> feedback;
 
   Lesson({
     required this.id,
     required this.title,
     required this.duration,
+    this.feedback = const [],
   });
 
   factory Lesson.fromJson(Map<String, dynamic> json) {
@@ -78,6 +80,82 @@ class Lesson {
       id: json['id'],
       title: json['title'],
       duration: json['duration'],
+      feedback: (json['feedback'] as List?)
+              ?.map((f) => CourseFeedback.fromJson(f))
+              .toList() ??
+          const [],
     );
+  }
+}
+
+class CourseFeedback {
+  final String userId;
+  final double rating;
+  final String comment;
+  final DateTime date;
+
+  CourseFeedback({
+    required this.userId,
+    required this.rating,
+    required this.comment,
+    required this.date,
+  });
+
+  factory CourseFeedback.fromJson(Map<String, dynamic> json) {
+    return CourseFeedback(
+      userId: json['userId'],
+      rating: json['rating'].toDouble(),
+      comment: json['comment'],
+      date: DateTime.parse(json['date']),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'userId': userId,
+      'rating': rating,
+      'comment': comment,
+      'date': date.toIso8601String(),
+    };
+  }
+}
+
+class EnrolledCourse {
+  final String id;
+  final String name;
+  final String imageUrl;
+  final String instructor;
+  final double progress;
+  final DateTime enrollmentDate;
+
+  EnrolledCourse({
+    required this.id,
+    required this.name,
+    required this.imageUrl,
+    required this.instructor,
+    this.progress = 0.0,
+    required this.enrollmentDate,
+  });
+
+  factory EnrolledCourse.fromJson(Map<String, dynamic> json) {
+    return EnrolledCourse(
+      id: json['id'],
+      name: json['name'],
+      imageUrl: json['imageUrl'],
+      instructor: json['instructor'],
+      progress: json['progress']?.toDouble() ?? 0.0,
+      enrollmentDate: DateTime.parse(json['enrollmentDate']),
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'imageUrl': imageUrl,
+      'instructor': instructor,
+      'progress': progress,
+      'enrollmentDate': enrollmentDate.toIso8601String(),
+    };
   }
 }
