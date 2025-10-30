@@ -59,6 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   child: Form(
                     key: _formKey,
+                    autovalidateMode: AutovalidateMode.always,
                     child: Column(
                       children: [
                         Text('Create Account', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: theme.primary)),

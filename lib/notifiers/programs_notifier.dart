@@ -13,7 +13,6 @@ class ProgramsNotifier extends ChangeNotifier {
 
   Future<void> fetchPrograms() async {
     _isLoading = true;
-    notifyListeners();
     _programs = await _apiService.getPrograms();
     _isLoading = false;
     notifyListeners();
