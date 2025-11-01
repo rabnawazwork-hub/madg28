@@ -151,7 +151,7 @@ class ProgressOverviewScreen extends StatelessWidget {
             const SizedBox(height: 8),
             LinearProgressIndicator(
               value: progress,
-              backgroundColor: theme.surfaceVariant,
+              backgroundColor: theme.surfaceContainerHighest,
               valueColor: AlwaysStoppedAnimation<Color>(theme.primary),
             ),
             const SizedBox(height: 4),

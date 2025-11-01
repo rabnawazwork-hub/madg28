@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:madg28/notifiers/program_detail_notifier.dart';
 import 'package:madg28/notifiers/programs_notifier.dart';
 import 'package:madg28/screens/home/program_listing.dart';
-import 'package:madg28/screens/profile_and_settings/settings_screen.dart'; // Updated import
 import 'package:madg28/screens/profile_and_settings/profile_screen.dart';
 import 'package:madg28/screens/profile_and_settings/edit_profile_screen.dart';
 import 'screens/login/login_screen.dart';
