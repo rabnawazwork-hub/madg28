@@ -3,6 +3,9 @@ import '../../main.dart';
 import '../signup/signup_screen.dart';
 import '../../widgets/custom_password_field.dart';
 import '../../widgets/social_login_button.dart';
+import 'package:provider/provider.dart';
+import '../../providers/user_provider.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -19,12 +22,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
+      final userProvider = Provider.of<UserProvider>(context, listen: false);
+      userProvider.setUser(
+        name: 'John Doe', // This would be fetched dynamically in real apps
+        email: _emailController.text,
+      );
+
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const MainScreen()),
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {

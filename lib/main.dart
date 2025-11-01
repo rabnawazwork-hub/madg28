@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:madg28/notifiers/program_detail_notifier.dart';
 import 'package:madg28/notifiers/programs_notifier.dart';
 import 'package:madg28/screens/home/program_listing.dart';
-import 'package:madg28/screens/profile_and_settings/profile_and_settings_screen.dart'; // Updated import
+import 'package:madg28/screens/profile_and_settings/settings_screen.dart'; // Updated import
+import 'package:madg28/screens/profile_and_settings/profile_screen.dart';
+import 'package:madg28/screens/profile_and_settings/edit_profile_screen.dart';
 import 'screens/login/login_screen.dart';
 import 'screens/signup/signup_screen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -10,6 +12,10 @@ import 'package:madg28/screens/course/enrolled_courses_screen.dart';
 import 'package:madg28/screens/search/search_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:madg28/theme_notifier.dart';
+import 'package:madg28/providers/locale_provider.dart';
+import 'package:madg28/providers/user_provider.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'l10n/app_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +24,8 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeNotifier(initialThemeMode)),
+        ChangeNotifierProvider(create: (_) => LocaleProvider()),
+        ChangeNotifierProvider(create: (_) => UserProvider()),
         ChangeNotifierProvider(create: (_) => ProgramsNotifier()),
         ChangeNotifierProvider(create: (_) => ProgramDetailNotifier()),
       ],
@@ -37,6 +45,20 @@ class MyApp extends StatelessWidget {
           title: 'Group 28',
           debugShowCheckedModeBanner: false,
           themeMode: themeNotifier.themeMode,
+          locale: context.watch<LocaleProvider>().locale, // 👈 set locale
+          supportedLocales: const [
+            Locale('en'), // English
+            Locale('es'), // Spanish
+            Locale('fr'), // French
+            Locale('de'), // German
+            // Add more as needed
+          ],
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            AppLocalizations.delegate,
+          ],
           theme: ThemeData(
             colorScheme: ColorScheme.fromSeed(
               seedColor: const Color(0xFFF36647),
@@ -59,6 +81,7 @@ class MyApp extends StatelessWidget {
           routes: {
             LoginScreen.routeName: (context) => const LoginScreen(),
             SignUpScreen.routeName: (context) => const SignUpScreen(),
+            EditProfileScreen.routeName: (context) => const EditProfileScreen(),
           },
         );
       },
@@ -79,7 +102,7 @@ class _MainScreenState extends State<MainScreen> {
     ProgramListingScreen(),
     SearchScreen(),
     EnrolledCoursesScreen(),
-    ProfileAndSettingsScreen(), // Updated to new combined screen
+    ProfileScreen(), // Updated to new combined screen
   ];
 
   void _onItemTapped(int index) {
