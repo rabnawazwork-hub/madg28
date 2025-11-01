@@ -60,6 +60,27 @@ class MockApiService {
     }
   }
 
+  Future<void> submitCourseFeedback(String programId, CourseFeedback feedback) async {
+    await _loadPrograms();
+    final programIndex = _programsData.indexWhere((p) => p.id == programId);
+    if (programIndex != -1) {
+      final updatedFeedback = List<CourseFeedback>.from(_programsData[programIndex].feedback)..add(feedback);
+      _programsData[programIndex] = Program(
+        id: _programsData[programIndex].id,
+        name: _programsData[programIndex].name,
+        description: _programsData[programIndex].description,
+        imageUrl: _programsData[programIndex].imageUrl,
+        instructor: _programsData[programIndex].instructor,
+        level: _programsData[programIndex].level,
+        duration: _programsData[programIndex].duration,
+        rating: _programsData[programIndex].rating, // Rating is not updated here, will be handled separately if needed
+        whatYouWillLearn: _programsData[programIndex].whatYouWillLearn,
+        lessons: _programsData[programIndex].lessons,
+        feedback: updatedFeedback,
+      );
+    }
+  }
+
   Future<void> enrollCourse(Program program) async {
     await _loadPrograms();
     if (!_enrolledCourses.any((course) => course.id == program.id)) {

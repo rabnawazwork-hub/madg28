@@ -146,6 +146,9 @@ class _ProgramDetailScreenState extends State<ProgramDetailScreen> {
                               .toList(),
                         ),
                         const SizedBox(height: 24),
+                        if (notifier.program != null)
+                          _buildCourseFeedbackSection(context, notifier.program!),
+                        const SizedBox(height: 24),
                         _buildSectionTitle(context, 'Lessons'),
                         const SizedBox(height: 12),
                         ...(notifier.program?.lessons ?? List.generate(3, (index) => Lesson(id: index.toString(), title: "title", duration: "duration"))).asMap()
@@ -193,6 +196,7 @@ class _ProgramDetailScreenState extends State<ProgramDetailScreen> {
                                 ),
                               ),
                             ),
+                        
                       ],
                     ),
                   ),
@@ -319,6 +323,125 @@ class _ProgramDetailScreenState extends State<ProgramDetailScreen> {
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           ),
           child: const Text('Submit Feedback'),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCourseFeedbackSection(BuildContext context, Program program) {
+    final TextTheme textTheme = Theme.of(context).textTheme;
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+    final ProgramDetailNotifier notifier = Provider.of<ProgramDetailNotifier>(context, listen: false);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildSectionTitle(context, 'Course Feedback'),
+        const SizedBox(height: 12),
+        if (program.feedback.isEmpty)
+          Text(
+            'No feedback yet. Be the first to leave a review!',
+            style: textTheme.bodyMedium?.copyWith(fontStyle: FontStyle.italic),
+          ),
+        ...program.feedback.map((f) => Card(
+              margin: const EdgeInsets.only(bottom: 8),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        RatingBarIndicator(
+                          rating: f.rating,
+                          itemBuilder: (context, index) => Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          itemCount: 5,
+                          itemSize: 20.0,
+                          direction: Axis.horizontal,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          f.userId,
+                          style: textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold),
+                        ),
+                        const Spacer(),
+                        Text(
+                          '${f.date.day}/${f.date.month}/${f.date.year}',
+                          style: textTheme.bodySmall,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      f.comment,
+                      style: textTheme.bodyMedium,
+                    ),
+                  ],
+                ),
+              ),
+            )),
+        const SizedBox(height: 24),
+        _buildSectionTitle(context, 'Leave a Review for the Course'),
+        const SizedBox(height: 12),
+        RatingBar.builder(
+          initialRating: _currentRating,
+          minRating: 1,
+          direction: Axis.horizontal,
+          allowHalfRating: true,
+          itemCount: 5,
+          itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+          itemBuilder: (context, _) => Icon(
+            Icons.star,
+            color: Colors.amber,
+          ),
+          onRatingUpdate: (rating) {
+            setState(() {
+              _currentRating = rating;
+            });
+          },
+        ),
+        const SizedBox(height: 16),
+        TextField(
+          controller: _feedbackController,
+          decoration: InputDecoration(
+            labelText: 'Your feedback',
+            hintText: 'Tell us what you think...',
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+            alignLabelWithHint: true,
+          ),
+          maxLines: 3,
+        ),
+        const SizedBox(height: 16),
+        ElevatedButton(
+          onPressed: () async {
+            if (_currentRating > 0 && _feedbackController.text.isNotEmpty) {
+              final newFeedback = CourseFeedback(
+                userId: 'currentUser', // TODO: Replace with actual user ID
+                rating: _currentRating,
+                comment: _feedbackController.text,
+                date: DateTime.now(),
+              );
+              await notifier.submitCourseFeedback(newFeedback);
+              setState(() {
+                _currentRating = 0.0;
+                _feedbackController.clear();
+              });
+            } else {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Please provide a rating and feedback.')),
+              );
+            }
+          },
+          style: ElevatedButton.styleFrom(
+            backgroundColor: colorScheme.primary,
+            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          ),
+          child: const Text('Submit Course Feedback'),
         ),
       ],
     );

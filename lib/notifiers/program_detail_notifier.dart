@@ -36,4 +36,10 @@ class ProgramDetailNotifier extends ChangeNotifier {
     await _apiService.submitFeedback(_program!.id, lessonId, feedback);
     await fetchProgramDetails(_program!.id); // Re-fetch to update UI
   }
+
+  Future<void> submitCourseFeedback(CourseFeedback feedback) async {
+    if (_program == null) return;
+    await _apiService.submitCourseFeedback(_program!.id, feedback);
+    await fetchProgramDetails(_program!.id); // Re-fetch to update UI
+  }
 }

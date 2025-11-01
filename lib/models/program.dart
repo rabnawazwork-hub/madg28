@@ -13,6 +13,7 @@ class Program {
   final double rating;
   final List<String> whatYouWillLearn;
   final List<Lesson> lessons;
+  final List<CourseFeedback> feedback;
 
   Program({
     required this.id,
@@ -25,6 +26,7 @@ class Program {
     required this.rating,
     required this.whatYouWillLearn,
     required this.lessons,
+    this.feedback = const [],
   });
 
   factory Program.fromJson(Map<String, dynamic> json) {
@@ -41,6 +43,10 @@ class Program {
       lessons: (json['lessons'] as List)
           .map((lesson) => Lesson.fromJson(lesson))
           .toList(),
+      feedback: (json['feedback'] as List?)
+              ?.map((f) => CourseFeedback.fromJson(f))
+              .toList() ??
+          const [],
     );
   }
 
