@@ -55,7 +55,7 @@ class Program {
       // Base64 image
       final String base64String = imageUrl.split(',').last;
       return MemoryImage(base64Decode(base64String));
-    } else if (imageUrl.startsWith('http')) {
+    } else if (imageUrl.startsWith('http') || imageUrl.startsWith('https')) {
       // Network image
       return NetworkImage(imageUrl);
     } else if (imageUrl.isNotEmpty) {

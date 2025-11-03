@@ -1,138 +1,110 @@
-# MADG28 - Course Management App
+# MADG9_Project - Online Learning Platform
 
-![App Logo](assets/images/logo.png)
+This is a Flutter-based online learning platform that provides users with a rich and interactive learning experience. The application allows users to browse a wide range of courses, enroll in them, track their progress, and interact with the course content. The app features a clean and modern user interface, with support for both light and dark themes, as well as localization for multiple languages.
 
-## Description
+## 🚀 Features
 
-MADG28 is a Flutter-based mobile application designed for managing and exploring online courses. It provides a user-friendly interface for browsing available courses, viewing detailed course information, enrolling in courses, and submitting feedback on individual lessons. The app aims to offer a seamless learning experience with features like skeleton loading for better UX, robust form validations, and personalized profile management.
+-   **User Authentication:** Secure login and signup functionality for users to access the platform.
+-   **Course Catalog:** A comprehensive list of available courses with detailed descriptions, instructors, and ratings.
+-   **Course Enrollment:** Users can enroll in courses they are interested in and track their progress.
+-   **Detailed Course View:** A detailed view for each course, including a list of lessons, what you will learn, and user feedback.
+-   **Search Functionality:** Users can easily search for courses based on keywords.
+-   **User Profile:** A dedicated screen for users to view and edit their profile information.
+-   **Enrolled Courses:** A list of all the courses a user is currently enrolled in, with progress tracking.
+-   **Localization:** Support for multiple languages, including English, Spanish, French, and German.
+-   **Light & Dark Theme:** The app supports both light and dark themes for a comfortable viewing experience.
 
-## Features
+## 📸 Screenshots
 
-- **User Authentication:** Secure login and signup with email (Gmail only) and password, including strong password validation rules.
-- **Social Login:** Option to continue with Google or Facebook (placeholder functionality).
-- **Course Listing:** Browse a list of available courses with essential details like name, instructor, and rating.
-- **Course Detail View:** Detailed view for each course, including description, learning outcomes, instructor, level, duration, and overall rating.
-- **Lesson Management:** Courses are broken down into individual lessons, each with a title and duration.
-- **Feedback System:** Users can submit star ratings and written feedback for each lesson, similar to Google Play Store reviews.
-- **Enrolled Courses:** Users can enroll in courses, and a dedicated screen displays all enrolled courses with progress tracking.
-- **Profile Management:** Users can view their profile, change their profile picture (using the device's gallery), and manage settings.
-- **Theme Switching:** Toggle between light and dark modes.
-- **Notifications Management:** Enable or disable in-app notifications.
-- **Language Selection:** Option to select app language (placeholder functionality).
-- **Skeleton Loading:** Enhanced user experience with skeleton loading indicators while data is being fetched.
-- **Responsive UI:** Designed to adapt to various screen sizes and orientations.
+| Login Screen | Home Screen |
+| :---: | :---: |
+| <img src="https://i.imgur.com/example.png" width="250"> | <img src="https://i.imgur.com/example.png" width="250"> |
+| **Course Detail** | **User Profile** |
+| <img src="https://i.imgur.com/example.png" width="250"> | <img src="https://i.imgur.com/example.png" width="250"> |
 
-## Screenshots
+*Note: Replace the placeholder image URLs with actual screenshots of your application.*
 
-*(Screenshots will be added here to showcase the application's features and UI.)*
-
-## Installation
+## 🛠️ Getting Started
 
 To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
-- Flutter SDK installed (version 3.9.0 or higher recommended)
-- Dart SDK (comes with Flutter)
-- Android Studio or VS Code with Flutter and Dart plugins
-- A physical device or emulator/simulator for running the app
+-   Flutter SDK: Make sure you have the Flutter SDK installed on your machine. For more information, see the [Flutter documentation](https://flutter.dev/docs/get-started/install).
+-   Dart: The project is written in Dart, which is included with the Flutter SDK.
 
-### Setup
+### Installation
 
 1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/madg28.git
+    ```sh
+    git clone https://github.com/your_username/madg28.git
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
     cd madg28
     ```
-2.  **Get dependencies:**
-    ```bash
+3.  **Install dependencies:**
+    ```sh
     flutter pub get
     ```
-3.  **Run the application:**
-    ```bash
+4.  **Run the app:**
+    ```sh
     flutter run
     ```
-    (Ensure you have a device or emulator connected and running.)
 
-## Usage
+## 📦 Dependencies
 
-- **Login/Signup:** Create a new account or log in with existing credentials. Password must meet strong validation criteria.
-- **Browse Courses:** Navigate through the list of available courses on the home screen.
-- **View Course Details:** Tap on any course to see its detailed description, lessons, and other information.
-- **Enroll in a Course:** On the course detail page, click the "Enroll Course" button to add it to your enrolled list.
-- **Leave Feedback:** Within each lesson's expanded view on the course detail page, you can submit a star rating and a comment.
-- **Enrolled Courses:** Access your enrolled courses from the home screen's app bar (school icon) to view your progress.
-- **Profile & Settings:** Manage your profile picture, toggle dark mode, and adjust notification settings from the profile screen.
+The project uses the following dependencies:
 
-## Project Structure
+-   `flutter`: The core Flutter framework.
+-   `image_picker`: For picking images from the gallery or camera.
+-   `language_picker`: For selecting a language from a list of supported languages.
+-   `flutter_localizations`: For localization support.
+-   `intl`: For internationalization and localization.
+-   `cupertino_icons`: For iOS-style icons.
+-   `google_nav_bar`: For the bottom navigation bar.
+-   `provider`: For state management.
+-   `shared_preferences`: For storing simple data.
+-   `skeletonizer`: For creating loading skeletons.
+-   `flutter_rating_bar`: For displaying rating bars.
 
-```
-madg28/
-├── lib/
-│   ├── main.dart                 # Main entry point of the application
-│   ├── theme_notifier.dart       # Manages theme switching (light/dark mode)
-│   ├── models/                   # Data models (Program, Lesson, Feedback, EnrolledCourse)
-│   │   ├── mockapi.dart          # Mock API service for data fetching and manipulation
-│   │   └── program.dart          # Defines data structures for courses and related entities
-│   ├── notifiers/                # ChangeNotifier classes for state management
-│   │   ├── program_detail_notifier.dart # Manages state for course detail screen
-│   │   └── programs_notifier.dart       # Manages state for program listing screen
-│   ├── screens/                  # UI screens of the application
-│   │   ├── program_detail_screen.dart   # Displays detailed course information
-│   │   ├── course/                      # Course-related screens
-│   │   │   └── enrolled_courses_screen.dart # Displays courses the user has enrolled in
-│   │   ├── home/                        # Home screen
-│   │   │   └── program_listing.dart     # Lists all available programs
-│   │   ├── login/                       # Login screen
-│   │   │   └── login_screen.dart
-│   │   ├── profile_and_settings/        # User profile and settings screen
-│   │   │   └── profile_and_settings_screen.dart
-│   │   ├── search/                      # Search screen
-│   │   │   └── search_screen.dart
-│   │   └── signup/                      # Signup screen
-│   │       └── signup_screen.dart
-│   └── widgets/                  # Reusable UI widgets
-│       ├── custom_password_field.dart   # Custom password input field with toggle visibility
-│       └── social_login_button.dart     # Button for social media logins
-├── assets/
-│   ├── data/
-│   │   └── programs.json         # Mock data for courses
-│   └── images/
-│       ├── advance_flutter.png   # Image used in profile background
-│       ├── facebook.png          # Facebook login icon
-│       ├── google.png            # Google login icon
-│       ├── logo.png              # App logo
-│       └── placeholder.png       # Placeholder image for skeleton loading
-├── pubspec.yaml                  # Project dependencies and metadata
-└── README.md                     # Project documentation
-```
+For a full list of dependencies, see the `pubspec.yaml` file.
 
-## Dependencies
+## 📁 Project Structure
 
-- `flutter`: The UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.
-- `cupertino_icons`: iOS-style icons for Flutter.
-- `google_nav_bar`: A beautiful and customizable Google style navigation bar for Flutter.
-- `provider`: A simple yet powerful state management solution for Flutter.
-- `shared_preferences`: Persistent storage for simple data.
-- `skeletonizer`: A Flutter package that converts already built widgets into skeleton loaders with no extra effort.
-- `flutter_rating_bar`: A Flutter widget to show a rating bar.
-- `image_picker`: A Flutter plugin for iOS, Android, and Web that allows you to pick images from the image library, or to take new pictures with the camera.
+The project follows a standard Flutter project structure, with the following key directories:
 
-## Future Enhancements
+-   `lib/`: The main source code of the application.
+    -   `main.dart`: The entry point of the application.
+    -   `models/`: Contains the data models for the application (e.g., `Program`, `Lesson`).
+    -   `notifiers/`: Contains the change notifiers for state management (e.g., `ProgramsNotifier`, `ProgramDetailNotifier`).
+    -   `providers/`: Contains the providers for managing the app's state (e.g., `LocaleProvider`, `UserProvider`).
+    -   `screens/`: Contains the different screens of the application (e.g., `LoginScreen`, `ProgramListingScreen`).
+    -   `widgets/`: Contains reusable widgets used throughout the application.
+    -   `l10n/`: Contains the localization files for different languages.
+-   `assets/`: Contains the static assets of the application, such as images and data files.
+-   `test/`: Contains the tests for the application.
 
-- **Backend Integration:** Replace mock API with a real backend for persistent data storage and user management.
-- **User-Specific Data:** Implement actual user authentication and store user-specific enrolled courses and feedback.
-- **Advanced Search:** Implement more robust search functionality with filters and sorting.
-- **Course Progress Tracking:** More detailed tracking of lesson completion and overall course progress.
-- **Push Notifications:** Implement real-time notifications for course updates, new feedback, etc.
-- **Offline Support:** Allow users to access course content and track progress offline.
-- **Payment Gateway Integration:** For paid courses.
-- **Instructor Dashboard:** A separate section for instructors to manage their courses and view feedback.
+## 🌐 State Management
 
-## Contributing
+The project uses the `provider` package for state management. This allows for a clean and efficient way to manage the application's state, with a clear separation of concerns between the UI and the business logic.
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
+## 🌍 Localization
 
-## License
+The application supports multiple languages through the `flutter_localizations` and `intl` packages. The localization files are located in the `lib/l10n` directory, and the `LocaleProvider` is used to manage the current locale of the app.
 
-This project is licensed under the MIT License - see the LICENSE file for details. (Note: A LICENSE file should be created in the root directory of the project.)
+## 🎨 Theming
+
+The application supports both light and dark themes, which can be switched dynamically. The `ThemeNotifier` is used to manage the current theme of the app, and the theme data is defined in the `main.dart` file.
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request

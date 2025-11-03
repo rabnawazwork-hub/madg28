@@ -2,7 +2,7 @@
 build/
 .dart_tool/
 .pub/
-*.apk
+#*.apk
 *.so
 *.zip
 
