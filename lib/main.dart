@@ -15,16 +15,23 @@ import 'package:madg28/providers/locale_provider.dart';
 import 'package:madg28/providers/user_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'l10n/app_localizations.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  ThemeMode initialThemeMode = await ThemeNotifier.getThemeModeFromPrefs();
+
+  final themeNotifier = ThemeNotifier(await ThemeNotifier.getThemeModeFromPrefs());
+  final localeProvider = LocaleProvider();
+  await localeProvider.loadFromPrefs();
+  final userProvider = UserProvider();
+  await userProvider.loadFromPrefs();
+
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => ThemeNotifier(initialThemeMode)),
-        ChangeNotifierProvider(create: (_) => LocaleProvider()),
-        ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider.value(value: themeNotifier),
+        ChangeNotifierProvider.value(value: localeProvider),
+        ChangeNotifierProvider.value(value: userProvider),
         ChangeNotifierProvider(create: (_) => ProgramsNotifier()),
         ChangeNotifierProvider(create: (_) => ProgramDetailNotifier()),
       ],

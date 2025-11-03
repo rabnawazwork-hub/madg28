@@ -77,9 +77,7 @@ class _EnrolledCoursesScreenState extends State<EnrolledCoursesScreen> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
                                 child: Image(
-                                  image: course.imageUrl.startsWith('http') || course.imageUrl.startsWith('https')
-                                      ? NetworkImage(course.imageUrl)
-                                      : AssetImage(course.imageUrl) as ImageProvider,
+                                  image: course.imageProvider,
                                   height: 80,
                                   width: 80,
                                   fit: BoxFit.cover,

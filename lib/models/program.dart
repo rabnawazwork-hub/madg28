@@ -164,4 +164,14 @@ class EnrolledCourse {
       'enrollmentDate': enrollmentDate.toIso8601String(),
     };
   }
+
+  ImageProvider get imageProvider {
+    if (imageUrl.startsWith('http') || imageUrl.startsWith('https')) {
+      return NetworkImage(imageUrl);
+    } else if (imageUrl.isNotEmpty) {
+      return AssetImage(imageUrl);
+    } else {
+      return const AssetImage('assets/images/logo.png');
+    }
+  }
 }

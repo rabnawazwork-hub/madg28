@@ -9,6 +9,8 @@ import '../../main.dart';
 import '../search/search_screen.dart';
 import '../course/enrolled_courses_screen.dart';
 import 'profile_screen.dart';
+import '../login/login_screen.dart';
+import '../../providers/user_provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -19,6 +21,16 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   bool _notificationsEnabled = true;
+
+  void _logout() {
+    final userProvider = Provider.of<UserProvider>(context, listen: false);
+    userProvider.clearUser();
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+      (route) => false,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,6 +99,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
           _buildSectionTitle(localizations.helpSupport),
           _buildTile(Icons.help_outline, localizations.faq, () {}),
           _buildTile(Icons.email, localizations.contactSupport, () {}),
+          const SizedBox(height: 20),
+          _buildTile(Icons.logout, 'Logout', _logout),
         ],
       ),
       bottomNavigationBar: GNav(

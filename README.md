@@ -1,28 +1,21 @@
-# MADG9_Project - Online Learning Platform
+# MADG28 - Online Learning Platform
 
 This is a Flutter-based online learning platform that provides users with a rich and interactive learning experience. The application allows users to browse a wide range of courses, enroll in them, track their progress, and interact with the course content. The app features a clean and modern user interface, with support for both light and dark themes, as well as localization for multiple languages.
 
 ## 🚀 Features
 
 -   **User Authentication:** Secure login and signup functionality for users to access the platform.
+-   **Mock Social Login:** Mock Google and Facebook login for a realistic user experience.
 -   **Course Catalog:** A comprehensive list of available courses with detailed descriptions, instructors, and ratings.
 -   **Course Enrollment:** Users can enroll in courses they are interested in and track their progress.
 -   **Detailed Course View:** A detailed view for each course, including a list of lessons, what you will learn, and user feedback.
 -   **Search Functionality:** Users can easily search for courses based on keywords.
 -   **User Profile:** A dedicated screen for users to view and edit their profile information.
 -   **Enrolled Courses:** A list of all the courses a user is currently enrolled in, with progress tracking.
+-   **Data Persistence:** User data, theme, and language preferences are saved across app restarts using `shared_preferences`.
 -   **Localization:** Support for multiple languages, including English, Spanish, French, and German.
 -   **Light & Dark Theme:** The app supports both light and dark themes for a comfortable viewing experience.
 
-## 📸 Screenshots
-
-| Login Screen | Home Screen |
-| :---: | :---: |
-| <img src="https://i.imgur.com/example.png" width="250"> | <img src="https://i.imgur.com/example.png" width="250"> |
-| **Course Detail** | **User Profile** |
-| <img src="https://i.imgur.com/example.png" width="250"> | <img src="https://i.imgur.com/example.png" width="250"> |
-
-*Note: Replace the placeholder image URLs with actual screenshots of your application.*
 
 ## 🛠️ Getting Started
 
@@ -69,6 +62,10 @@ The project uses the following dependencies:
 -   `flutter_rating_bar`: For displaying rating bars.
 
 For a full list of dependencies, see the `pubspec.yaml` file.
+
+##  Mocking
+
+This application uses a mock API and mock authentication for demonstration purposes. The course data is loaded from a local JSON file, and the login functionality is simulated to provide a realistic user experience without requiring a backend.
 
 ## 📁 Project Structure
 

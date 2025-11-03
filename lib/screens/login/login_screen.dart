@@ -5,6 +5,7 @@ import '../../widgets/custom_password_field.dart';
 import '../../widgets/social_login_button.dart';
 import 'package:provider/provider.dart';
 import '../../providers/user_provider.dart';
+import '../../models/mock_user.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -20,6 +21,15 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
+  final List<MockUser> mockUsers = [
+    MockUser(name: 'Rab Nawaz', email: 'rabnawaz@gmail.com', photoUrl: 'assets/images/default_avatar.png'),
+    MockUser(name: 'Oriana Khan', email: 'orianakhan@gmail.com', photoUrl: 'assets/images/default_avatar.png'),
+    MockUser(name: 'Bilal Ahmed', email: 'bilalahmed@gmail.com', photoUrl: 'assets/images/default_avatar.png'),
+    MockUser(name: 'Nabila Newaz', email: 'nabilanewaz@gmail.com', photoUrl: 'assets/images/default_avatar.png'),
+  ];
+
+  final MockUser mockFacebookUser = MockUser(name: 'John Doe', email: 'johndoe@facebook.com', photoUrl: 'assets/images/default_avatar.png');
+
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
       final userProvider = Provider.of<UserProvider>(context, listen: false);
@@ -33,6 +43,74 @@ class _LoginScreenState extends State<LoginScreen> {
         MaterialPageRoute(builder: (_) => const MainScreen()),
       );
     }
+  }
+
+  void _googleSignIn() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Select a Google Account'),
+          content: SizedBox(
+            width: double.maxFinite,
+            child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: mockUsers.length,
+              itemBuilder: (context, index) {
+                final user = mockUsers[index];
+                return ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage(user.photoUrl),
+                  ),
+                  title: Text(user.name),
+                  subtitle: Text(user.email),
+                  onTap: () {
+                    final userProvider = Provider.of<UserProvider>(context, listen: false);
+                    userProvider.setUser(
+                      name: user.name,
+                      email: user.email,
+                    );
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (_) => const MainScreen()),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void _facebookSignIn() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Log in with Facebook'),
+          content: ListTile(
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(mockFacebookUser.photoUrl),
+            ),
+            title: Text(mockFacebookUser.name),
+            subtitle: const Text('Continue as John Doe'),
+            onTap: () {
+              final userProvider = Provider.of<UserProvider>(context, listen: false);
+              userProvider.setUser(
+                name: mockFacebookUser.name,
+                email: mockFacebookUser.email,
+              );
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const MainScreen()),
+              );
+            },
+          ),
+        );
+      },
+    );
   }
 
 
@@ -110,13 +188,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         SocialLoginButton(
                           label: 'Continue with Google',
                           iconPath: 'assets/images/google.png',
-                          onPressed: _submit,
+                          onPressed: _googleSignIn,
                         ),
                         const SizedBox(height: 8),
                         SocialLoginButton(
                           label: 'Continue with Facebook',
                           iconPath: 'assets/images/facebook.png',
-                          onPressed: _submit,
+                          onPressed: _facebookSignIn,
                         ),
                         const SizedBox(height: 16),
                         TextButton(
