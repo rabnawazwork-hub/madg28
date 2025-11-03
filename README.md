@@ -81,6 +81,19 @@ The project follows a standard Flutter project structure, with the following key
     -   `l10n/`: Contains the localization files for different languages.
 -   `assets/`: Contains the static assets of the application, such as images and data files.
 -   `test/`: Contains the tests for the application.
+## Screenshots
+
+![Screenshot_20251103-194822](https://github.com/user-attachments/assets/7c9a5a05-e0e9-49b7-a6af-6405b85d3bff)
+![Screenshot_20251103-194826](https://github.com/user-attachments/assets/4c030375-d832-48ee-9976-8d3d688e19b5)
+![Screenshot_20251103-194920](https://github.com/user-attachments/assets/c7017ace-e759-4f79-b47d-2ec86f68f383)
+<img width="275" height="484" alt="home" src="https://github.com/user-attachments/assets/717fbf81-2dc9-4c58-8d93-cf58b82e8fb6" />
+<img width="270" height="487" alt="details" src="https://github.com/user-attachments/assets/1a7a1bce-a44e-480c-9a48-6fc117ac9eeb" />
+<img width="275" height="485" alt="image" src="https://github.com/user-attachments/assets/de6bb8d4-9f97-42b3-8a91-506339962532" />
+<img width="273" height="488" alt="image" src="https://github.com/user-attachments/assets/be18a599-615d-4f1d-a5dc-3b5a44447018" />
+![Screenshot_20251103-194920](https://github.com/user-attachments/assets/5e935a05-2033-4dcf-b3a0-0b5694c31ae0)
+![Screenshot_20251103-194936](https://github.com/user-attachments/assets/a72eaefc-83ac-4448-963c-d246c814e887)
+![Screenshot_20251103-194945](https://github.com/user-attachments/assets/e6646950-ce91-4b48-b66a-d019cfbfd338)
+
 
 ## 🌐 State Management
 
