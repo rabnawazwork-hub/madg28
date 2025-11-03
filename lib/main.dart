@@ -15,7 +15,6 @@ import 'package:madg28/providers/locale_provider.dart';
 import 'package:madg28/providers/user_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'l10n/app_localizations.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -83,7 +82,15 @@ class MyApp extends StatelessWidget {
             ),
             useMaterial3: true,
           ),
-          home: const LoginScreen(),
+          home: Consumer<UserProvider>(
+            builder: (context, userProvider, child) {
+              if (userProvider.isLoggedIn) {
+                return const MainScreen();
+              } else {
+                return const LoginScreen();
+              }
+            },
+          ),
           routes: {
             LoginScreen.routeName: (context) => const LoginScreen(),
             SignUpScreen.routeName: (context) => const SignUpScreen(),

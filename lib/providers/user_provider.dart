@@ -7,10 +7,12 @@ class UserProvider extends ChangeNotifier {
   String _name = 'Username';
   String _email = 'user@gmail.com';
   String? _imagePath; // path or URL of profile image
+  bool _isLoggedIn = false;
 
   String get name => _name;
   String get email => _email;
   String? get imagePath => _imagePath;
+  bool get isLoggedIn => _isLoggedIn;
 
   UserProvider() {
     loadFromPrefs();
@@ -24,6 +26,7 @@ class UserProvider extends ChangeNotifier {
     _name = name;
     _email = email;
     _imagePath = imagePath;
+    _isLoggedIn = true;
     _saveToPrefs();
     notifyListeners();
   }
@@ -32,6 +35,7 @@ class UserProvider extends ChangeNotifier {
     _name = 'Username';
     _email = 'user@gmail.com';
     _imagePath = '';
+    _isLoggedIn = false;
     _saveToPrefs();
     notifyListeners();
   }
@@ -41,6 +45,7 @@ class UserProvider extends ChangeNotifier {
     await prefs.setString('name', _name);
     await prefs.setString('email', _email);
     await prefs.setString('imagePath', _imagePath ?? '');
+    await prefs.setBool('isLoggedIn', _isLoggedIn);
   }
 
   Future<void> loadFromPrefs() async {
@@ -48,6 +53,7 @@ class UserProvider extends ChangeNotifier {
     _name = prefs.getString('name') ?? 'Username';
     _email = prefs.getString('email') ?? 'user@gmail.com';
     _imagePath = prefs.getString('imagePath');
+    _isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
     notifyListeners();
   }
 }
